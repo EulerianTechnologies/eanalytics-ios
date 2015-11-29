@@ -7,6 +7,7 @@
 //
 
 #import "EAViewController.h"
+#import "EAnalytics/EAnalytics.h"
 
 @interface EAViewController ()
 
@@ -17,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    [EAnalytics sayHello];
 }
 
 - (void)didReceiveMemoryWarning
