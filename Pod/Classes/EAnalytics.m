@@ -7,7 +7,7 @@
 //
 
 #import "EAnalytics.h"
-#import "EAnalyticsUtils.h"
+#import "AdIdentifier.h"
 #import "EAAssertion.h"
 #import "Utils.h"
 #import "NSData+GZIP.h"
@@ -50,7 +50,7 @@ dispatch_queue_t serialQueue;
 + (void)initWithHost:(NSString *)host andWithDebugLogs:(BOOL) debug
 {
     [EAAssertion assertCondition:[Utils testHost:host] withMessage:[NSString stringWithFormat:@"host %@ is not valid", host]];
-    NSString *adSupportDetectedMsg = [EAnalyticsUtils hasAdSupportFrameworkAdded] ? @"AdSupport framework detected." : @"AdSupport framework not detected -> IDFA will not be provided.";
+    NSString *adSupportDetectedMsg = [AdIdentifier hasAdSupportFrameworkAdded] ? @"AdSupport framework detected." : @"AdSupport framework not detected -> IDFA will not be provided.";
     NSLog(@"EULERIAN ANALYTICS : initialized with %@. Running version %@. %@.", host, [EAnalytics sdkVersion], adSupportDetectedMsg);
     sDebug = debug;
     sSTDomain = [NSString stringWithFormat:@"https://%@/collectorjson/-/", host];

@@ -8,7 +8,7 @@
 
 #import "EAProperties.h"
 #import "UIDevice+Utils.h"
-#import "EAnalyticsUtils.h"
+#import "AdIdentifier.h"
 #import "EAAssertion.h"
 #import "NSMutableDictionary+Utils.h"
 
@@ -80,9 +80,9 @@ static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
         NSUUID *idfv = [[UIDevice currentDevice] identifierForVendor];
         [_dictionary setObject:[idfv UUIDString] forKey:KEY_GLOBAL_IDFV];
         
-        if ([EAnalyticsUtils hasAdSupportFrameworkAdded]) {
-            [_dictionary setObject:([EAnalyticsUtils adTrackingEnabled] ? @"true" : @"false") forKey:KEY_GLOBAL_ADTRACKING_ENABLED];
-            [_dictionary setObject:[EAnalyticsUtils idfa] forKey:KEY_GLOBAL_IDFA];
+        if ([AdIdentifier hasAdSupportFrameworkAdded]) {
+            [_dictionary setObject:([AdIdentifier adTrackingEnabled] ? @"true" : @"false") forKey:KEY_GLOBAL_ADTRACKING_ENABLED];
+            [_dictionary setObject:[AdIdentifier idfa] forKey:KEY_GLOBAL_IDFA];
         }
         
         // MARK: - default page params
