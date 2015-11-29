@@ -18,8 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    [EAnalytics sayHello];
+    
 }
 
 - (void)didReceiveMemoryWarning
