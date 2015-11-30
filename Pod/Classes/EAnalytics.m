@@ -101,8 +101,7 @@ dispatch_queue_t serialQueue;
         NSArray* untracked = [defaults arrayForKey:USER_DEFAULT_UNTRACKED_PROPERTIES_ARRAY];
         if (untracked) {
             if (sDebug) {
-                NSString *log = [NSString stringWithFormat:@"add %d stored properties to the current track.", (int)[untracked count]];
-                NSLog(log);
+                NSLog(@"add %d stored properties to the current track.", (int)[untracked count]);
             }
             [track addObjectsFromArray:untracked];
         }
