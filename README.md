@@ -1,17 +1,6 @@
-# EAnalytics
+# Eulerian Analytics #
 
-[![CI Status](http://img.shields.io/travis/François Rouault/EAnalytics.svg?style=flat)](https://travis-ci.org/François Rouault/EAnalytics)
-[![Version](https://img.shields.io/cocoapods/v/EAnalytics.svg?style=flat)](http://cocoapods.org/pods/EAnalytics)
-[![License](https://img.shields.io/cocoapods/l/EAnalytics.svg?style=flat)](http://cocoapods.org/pods/EAnalytics)
-[![Platform](https://img.shields.io/cocoapods/p/EAnalytics.svg?style=flat)](http://cocoapods.org/pods/EAnalytics)
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
+## Installation ##
 
 EAnalytics is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -20,10 +9,87 @@ it, simply add the following line to your Podfile:
 pod "EAnalytics"
 ```
 
-## Author
+## Usage ##
 
-François Rouault, francois.rouault.fr@gmail.com
+## Example ##
 
-## License
+```
+#!objective-c
+// Import EAnalytics into the class that wants to make use of the library.
+#import "EAnalytics/EAnalytics.h"
 
-EAnalytics is available under the MIT license. See the LICENSE file for more info.
+// Initialize The Eulerian Analytics once, in app launch delegate for instance.
+[EAnalytics initWithHost:@"your.host.net" andWithDebugLogs:YES];
+
+// Create Eulerian Properties
+EAProperties *prop = [[EAProperties alloc] initWithPath:@"my_prop_path"];
+[prop setEulerianWithEmail:@"readme@mail.com"];
+[prop setEulerianWithLatitude:48.872731 longitude:2.356003];
+[prop setEulerianWithValue:@"custom_value" forKey:@"custom_key"];
+
+// And track
+[EAnalytics track:myProperties];
+```
+
+### Initialization ###
+
+Initialize the SDK with an valid host provided by Eulerian Technologies.
+
+```
+#!objective-c
+[EAnalytics initWithHost:@"your.host.net" andWithDebugLogs:YES];
+```
+
+### Create properties ###
+
+Create any properties using:
+```
+#!objective-c
+EAProperties *prop = [[EAProperties alloc] initWithPath:@"my_prop_path"];
+[prop setEulerianWithEmail:@"readme@mail.com"];
+[prop setEulerianWithLatitude:48.872731 longitude:2.356003];
+```
+
+Add custom key to your properties:
+```
+#!objective-c
+[prop setEulerianWithValue:@"custom_value" forKey:@"custom_key"];
+```
+
+You can use the set of convenient objects to track specific EA properties :
+
+* EACart
+* EAOrder
+* EAProducts
+* EACart
+* EAEstimate
+* EASearch
+
+### Track properties ###
+
+Track properties using:
+
+```
+#!objective-c
+[EAnalytics track:myProperties];
+```
+
+### Good to know ###
+
+The SDK lets you access two of its property : the EUIDL and the current SDK version :
+
+```
+#!objective-c
+[EAnalytics euidl];
+[EAnalytics version];
+```
+
+If the SDK failed to send properties (no network), the SDK will try again in the next calls of 'track' or/and when the app gets launched.
+
+## Author ##
+
+Eulerian Technologies
+
+## License ##
+
+EAnalytics is available under the *Eulerian Technologies* license.
