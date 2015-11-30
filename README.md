@@ -11,7 +11,7 @@ pod "EAnalytics"
 
 ## Usage ##
 
-## Example ##
+### Example ###
 
 ```
 #!objective-c
