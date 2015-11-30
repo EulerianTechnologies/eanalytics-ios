@@ -10,12 +10,12 @@
 
 @interface EAOrder : EAProperties
 
-- (instancetype) initWithPath:(NSString *)path withRef:(NSString*)ref;
-- (void) setEulerianWithAmount:(double)value;
-- (void) setEulerianWithCurrency:(NSString*)value;
-- (void) setEulerianWithType:(NSString*)value;
-- (void) setEulerianWithPayment:(NSString*)value;
-- (void) setEulerianWithEstimateRef:(NSString*)value;
-- (void) addEulerian:(EAOProduct*)product amount:(double)amout quantity:(int)quantity;
+- (instancetype)initWithPath:(NSString *)path withRef:(NSString*)ref;
+- (void)setEulerianWithAmount:(double)value;
+- (void)setEulerianWithCurrency:(NSString*)value;
+- (void)setEulerianWithType:(NSString*)value;
+- (void)setEulerianWithPayment:(NSString*)value;
+- (void)setEulerianWithEstimateRef:(NSString*)value;
+- (void)addEulerian:(EAOProduct*)product amount:(double)amout quantity:(int)quantity;
 
 @end

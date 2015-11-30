@@ -28,19 +28,19 @@ NSMutableDictionary *engine;
     return self;
 }
 
-- (void) setEulerianWithResults:(int)value
+- (void)setEulerianWithResults:(int)value
 {
     [engine setObject:[NSNumber numberWithInt:value] forKey:KEY_RESULTS];
     [self setEngine];
 }
 
-- (void) setEulerianWithParams:(EAOParams*)value
+- (void)setEulerianWithParams:(EAOParams*)value
 {
     [engine setObject:value.dictionary forKey:KEY_PARAMS];
     [self setEngine];
 }
 
-- (void) setEngine {
+- (void)setEngine {
     [self setEulerianWithValue:engine forKey:KEY_SEARCH_ENGINE];
 }
 

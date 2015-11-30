@@ -10,10 +10,10 @@
 
 @interface EAEstimate : EAProperties
 
-- (instancetype) initWithPath:(NSString *)path withRef:(NSString*)ref;
-- (void) setEulerianWithAmount:(double)value;
-- (void) setEulerianWithCurrency:(NSString*)value;
-- (void) setEulerianWithType:(NSString*)value;
-- (void) addEulerian:(EAOProduct*)product amount:(double)amout quantity:(int)quantity;
+- (instancetype)initWithPath:(NSString *)path withRef:(NSString*)ref;
+- (void)setEulerianWithAmount:(double)value;
+- (void)setEulerianWithCurrency:(NSString*)value;
+- (void)setEulerianWithType:(NSString*)value;
+- (void)addEulerian:(EAOProduct*)product amount:(double)amout quantity:(int)quantity;
 
 @end

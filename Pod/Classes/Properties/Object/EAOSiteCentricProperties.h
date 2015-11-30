@@ -12,6 +12,6 @@
 
 @property (readonly) NSMutableDictionary* dictionary;
 
-- (void) setEulerianWithValues:(NSArray *)values forKey:(NSString *)key;
+- (void)setEulerianWithValues:(NSArray *)values forKey:(NSString *)key;
 
 @end

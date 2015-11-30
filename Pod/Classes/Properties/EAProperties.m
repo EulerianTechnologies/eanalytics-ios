@@ -38,7 +38,7 @@ static NSString* const KEY_PAGE_ACTION = @"action";
 static NSString* const KEY_PAGE_PROPERTY = @"property";
 static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
 
-- (NSString *) json
+- (NSString *)json
 {
     return _dictionary.json;
 }
@@ -52,7 +52,7 @@ static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
     return self;
 }
 
-- (id) initWithPath:(NSString *)path
+- (id)initWithPath:(NSString *)path
 {
     self = [super init];
     if (self) {
@@ -97,58 +97,58 @@ static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
 
 // MARK: - Page params
 
-- (void) setEulerianWithLatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude
+- (void)setEulerianWithLatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude
 {
     [_dictionary setObject:[[NSNumber numberWithDouble:latitude] stringValue] forKey:KEY_PAGE_LATITUDE];
     [_dictionary setObject:[[NSNumber numberWithDouble:longitude] stringValue] forKey:KEY_PAGE_LONGITUDE];
 }
 
-- (void) setEulerianWithLocation:(CLLocationCoordinate2D) location
+- (void)setEulerianWithLocation:(CLLocationCoordinate2D) location
 {
     [self setEulerianWithLatitude:location.latitude longitude:location.longitude];
 }
 
-- (void) setEulerianWithEmail:(NSString*)value
+- (void)setEulerianWithEmail:(NSString*)value
 {
     [_dictionary setObject:value forKey:KEY_PAGE_EMAIL];
 }
 
-- (void) setEulerianWithUid:(NSString*)value
+- (void)setEulerianWithUid:(NSString*)value
 {
     [_dictionary setObject:value forKey:KEY_PAGE_UID];
 }
 
-- (void) setEulerianWithProfile:(NSString*)value
+- (void)setEulerianWithProfile:(NSString*)value
 {
     [_dictionary setObject:value forKey:KEY_PAGE_PROFILE];
 }
 
-- (void) setEulerianWithPageGroup:(NSString*)value
+- (void)setEulerianWithPageGroup:(NSString*)value
 {
     [_dictionary setObject:value forKey:KEY_PAGE_GROUP];
 }
 
-- (void) setEulerianWithNewCustomer:(BOOL)value
+- (void)setEulerianWithNewCustomer:(BOOL)value
 {
     if (value) {
         [_dictionary setObject:@"1" forKey:KEY_PAGE_NEW_CUSTOMER];
     }
 }
 
-- (void) setEulerianWithAction:(EAOAction *)value
+- (void)setEulerianWithAction:(EAOAction *)value
 {
     [value checkConformity];
     [_dictionary setObject:value.dictionary forKey:KEY_PAGE_ACTION];
 }
 
-- (void) setEulerianWithProperties:(EAOSiteCentricProperties*)value
+- (void)setEulerianWithProperties:(EAOSiteCentricProperties*)value
 {
     [_dictionary setObject:value.dictionary forKey:KEY_PAGE_PROPERTY];
 }
 
 // MARK : other values
 
-- (void) setEulerianWithValue:(id)value forKey:(NSString *)key
+- (void)setEulerianWithValue:(id)value forKey:(NSString *)key
 {
     [_dictionary setObject:value forKey:key];
 }

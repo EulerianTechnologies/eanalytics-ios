@@ -15,8 +15,8 @@
 
 - (instancetype)initWithRef:(NSString*)ref;
 
-- (void) setEulerianWithName:(NSString*)value;
-- (void) setEulerianWithGroup:(NSString*)value;
-- (void) setEulerianWithParams:(EAOParams*)value;
+- (void)setEulerianWithName:(NSString*)value;
+- (void)setEulerianWithGroup:(NSString*)value;
+- (void)setEulerianWithParams:(EAOParams*)value;
 
 @end

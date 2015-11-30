@@ -26,17 +26,17 @@ static NSString* const KEY_GROUP = @"group";
     return self;
 }
 
-- (void) setEulerianWithName:(NSString*)value
+- (void)setEulerianWithName:(NSString*)value
 {
     [_dictionary setObject:value forKey:KEY_NAME];
 }
 
-- (void) setEulerianWithGroup:(NSString*)value
+- (void)setEulerianWithGroup:(NSString*)value
 {
     [_dictionary setObject:value forKey:KEY_GROUP];
 }
 
-- (void) setEulerianWithParams:(EAOParams*)value
+- (void)setEulerianWithParams:(EAOParams*)value
 {
     [_dictionary setObject:value.dictionary forKey:KEY_PARAMS];
 }

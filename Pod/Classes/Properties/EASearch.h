@@ -10,8 +10,8 @@
 
 @interface EASearch : EAProperties
 
-- (instancetype) initWithPath:(NSString *)path withName:(NSString*)name;
-- (void) setEulerianWithResults:(int)value;
-- (void) setEulerianWithParams:(EAOParams*)value;
+- (instancetype)initWithPath:(NSString *)path withName:(NSString*)name;
+- (void)setEulerianWithResults:(int)value;
+- (void)setEulerianWithParams:(EAOParams*)value;
 
 @end

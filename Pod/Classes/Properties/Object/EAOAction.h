@@ -12,9 +12,9 @@
 
 @property (readonly) NSMutableDictionary* dictionary;
 
-- (void) setEulerianWithRef:(NSString *) value;
-- (void) setEulerianWithInValue:(NSString *) value;
-- (void) setEulerianWithOutValues:(NSArray *) values;
-- (void) checkConformity;
+- (void)setEulerianWithRef:(NSString *) value;
+- (void)setEulerianWithInValue:(NSString *) value;
+- (void)setEulerianWithOutValues:(NSArray *) values;
+- (void)checkConformity;
 
 @end

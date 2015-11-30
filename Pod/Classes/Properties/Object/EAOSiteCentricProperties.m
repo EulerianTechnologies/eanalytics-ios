@@ -19,7 +19,7 @@
     return self;
 }
 
-- (void) setEulerianWithValues:(NSArray *)values forKey:(NSString *)key
+- (void)setEulerianWithValues:(NSArray *)values forKey:(NSString *)key
 {
     [_dictionary setObject:values forKey:key];
 }

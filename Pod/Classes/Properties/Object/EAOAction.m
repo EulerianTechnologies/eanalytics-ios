@@ -24,22 +24,22 @@ static NSString* const KEY_OUT = @"out";
     return self;
 }
 
-- (void) setEulerianWithRef:(NSString *) value
+- (void)setEulerianWithRef:(NSString *) value
 {
     [_dictionary setObject:value forKey:KEY_REF];
 }
 
-- (void) setEulerianWithInValue:(NSString *) value
+- (void)setEulerianWithInValue:(NSString *) value
 {
     [_dictionary setObject:value forKey:KEY_IN];
 }
 
-- (void) setEulerianWithOutValues:(NSArray *) values
+- (void)setEulerianWithOutValues:(NSArray *) values
 {
     [_dictionary setObject:values forKey:KEY_OUT];
 }
 
-- (void) checkConformity
+- (void)checkConformity
 {
     id hasIn = [_dictionary objectForKey:KEY_IN];
     id hasOut = [_dictionary objectForKey:KEY_OUT];

@@ -13,7 +13,7 @@
 
 static NSString* const KEY_PRODUCTS = @"products";
 
-- (void) setEulerianWithProducts:(NSArray*)eaoproducts
+- (void)setEulerianWithProducts:(NSArray*)eaoproducts
 {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (EAOProduct *item in eaoproducts) {

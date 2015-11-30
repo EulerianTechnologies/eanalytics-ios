@@ -19,12 +19,12 @@
     return self;
 }
 
-- (void) setEulerianWithStringValue:(NSString*)value forKey:(NSString*)key
+- (void)setEulerianWithStringValue:(NSString*)value forKey:(NSString*)key
 {
     [_dictionary setObject:value forKey:key];
 }
 
-- (void) setEulerianWithIntValue:(int)value forKey:(NSString*)key
+- (void)setEulerianWithIntValue:(int)value forKey:(NSString*)key
 {
     [_dictionary setObject:[NSNumber numberWithInteger:value] forKey:key];
 }

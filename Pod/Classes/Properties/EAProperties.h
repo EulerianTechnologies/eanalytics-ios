@@ -18,16 +18,16 @@
 
 - (NSString *) json;
 
-- (id) initWithPath:(NSString*) path;
-- (void) setEulerianWithLatitude:(double)latitude longitude:(double)longitude;
-- (void) setEulerianWithLocation:(CLLocationCoordinate2D) location;
-- (void) setEulerianWithEmail:(NSString*)value;
-- (void) setEulerianWithUid:(NSString*)value;
-- (void) setEulerianWithProfile:(NSString*)value;
-- (void) setEulerianWithPageGroup:(NSString*)value;
-- (void) setEulerianWithNewCustomer:(BOOL)value;
-- (void) setEulerianWithAction:(EAOAction*)value;
-- (void) setEulerianWithProperties:(EAOSiteCentricProperties*)value;
-- (void) setEulerianWithValue:(id)value forKey:(NSString *)key;
+- (id)initWithPath:(NSString*) path;
+- (void)setEulerianWithLatitude:(double)latitude longitude:(double)longitude;
+- (void)setEulerianWithLocation:(CLLocationCoordinate2D) location;
+- (void)setEulerianWithEmail:(NSString*)value;
+- (void)setEulerianWithUid:(NSString*)value;
+- (void)setEulerianWithProfile:(NSString*)value;
+- (void)setEulerianWithPageGroup:(NSString*)value;
+- (void)setEulerianWithNewCustomer:(BOOL)value;
+- (void)setEulerianWithAction:(EAOAction*)value;
+- (void)setEulerianWithProperties:(EAOSiteCentricProperties*)value;
+- (void)setEulerianWithValue:(id)value forKey:(NSString *)key;
 
 @end

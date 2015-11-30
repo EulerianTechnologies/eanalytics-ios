@@ -31,27 +31,27 @@ static NSString* const KEY_PRODUCT_QUANTITY = @"quantity";
     return self;
 }
 
-- (void) setEulerianWithAmount:(double)value
+- (void)setEulerianWithAmount:(double)value
 {
     [self setEulerianWithValue:[[NSNumber numberWithDouble:value] stringValue] forKey: KEY_SALE_AMOUNT];
 }
 
-- (void) setEulerianWithCurrency:(NSString*)value
+- (void)setEulerianWithCurrency:(NSString*)value
 {
     [self setEulerianWithValue:value forKey: KEY_CURRENCY];
 }
 
-- (void) setEulerianWithType:(NSString*)value
+- (void)setEulerianWithType:(NSString*)value
 {
     [self setEulerianWithValue:value forKey: KEY_TYPE];
 }
 
-- (void) setEulerianWithPayment:(NSString*)value
+- (void)setEulerianWithPayment:(NSString*)value
 {
     [self setEulerianWithValue:value forKey: KEY_PAYMENT];
 }
 
-- (void) setEulerianWithEstimateRef:(NSString*)value
+- (void)setEulerianWithEstimateRef:(NSString*)value
 {
     [self setEulerianWithValue:value forKey: KEY_ESTIMATE_REF];
 }

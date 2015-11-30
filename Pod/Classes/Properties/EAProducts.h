@@ -10,6 +10,6 @@
 
 @interface EAProducts : EAProperties
 
-- (void) setEulerianWithProducts:(NSArray*)eaoproducts;
+- (void)setEulerianWithProducts:(NSArray*)eaoproducts;
 
 @end
