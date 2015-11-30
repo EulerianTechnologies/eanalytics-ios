@@ -15,10 +15,10 @@ pod "EAnalytics"
 
 ```
 #!objective-c
-// Import EAnalytics into the class that wants to make use of the library.
+// Import EAnalytics into the class that wants to make use of the library
 #import "EAnalytics/EAnalytics.h"
 
-// Initialize The Eulerian Analytics once, in app launch delegate for instance.
+// Initialize The Eulerian Analytics once, in app launch delegate for instance
 [EAnalytics initWithHost:@"your.host.net" andWithDebugLogs:YES];
 
 // Create Eulerian Properties
@@ -92,4 +92,4 @@ Eulerian Technologies
 
 ## License ##
 
-EAnalytics is available under the *Eulerian Technologies* license.
+EAnalytics is available under the MIT license.
