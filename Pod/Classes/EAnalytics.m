@@ -27,11 +27,11 @@ static NSString *sSTDomain;
 
 dispatch_queue_t serialQueue;
 
-//- MARK: constants
+//- MARK: var
 
-+ (NSString *) sdkVersion
++ (NSString *)version
 {
-    return @"1.3";
+    return @"1.3.0";
 }
 
 + (NSString*)euidl {
@@ -50,8 +50,8 @@ dispatch_queue_t serialQueue;
 + (void)initWithHost:(NSString *)host andWithDebugLogs:(BOOL) debug
 {
     [EAAssertion assertCondition:[Utils testHost:host] withMessage:[NSString stringWithFormat:@"host %@ is not valid", host]];
-    NSString *adSupportDetectedMsg = [AdIdentifier hasAdSupportFrameworkAdded] ? @"AdSupport framework detected." : @"AdSupport framework not detected -> IDFA will not be provided.";
-    NSLog(@"EULERIAN ANALYTICS : initialized with %@. Running version %@. %@.", host, [EAnalytics sdkVersion], adSupportDetectedMsg);
+    NSString *adSupportDetectedMsg = [AdIdentifier hasAdSupportFrameworkAdded] ? @"AdSupport framework detected" : @"AdSupport framework not detected -> IDFA will not be provided";
+    NSLog(@"EULERIAN ANALYTICS : initialized with %@. Running lib v%@. %@.", host, [EAnalytics version], adSupportDetectedMsg);
     sDebug = debug;
     sSTDomain = [NSString stringWithFormat:@"https://%@/collectorjson/-/", host];
     serialQueue = dispatch_queue_create("com.eulerian.serial.queue", DISPATCH_QUEUE_SERIAL);
@@ -85,7 +85,7 @@ dispatch_queue_t serialQueue;
 {
     dispatch_async(serialQueue, ^{
         [properties setEulerianWithValue:[EAnalytics euidl] forKey:KEY_GLOBAL_EUIDL];
-        [properties setEulerianWithValue:[EAnalytics sdkVersion] forKey:KEY_GLOBAL_SDK_VERSION];
+        [properties setEulerianWithValue:[EAnalytics version] forKey:KEY_GLOBAL_SDK_VERSION];
         //block
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if ([defaults boolForKey:USER_DEFAULT_LOOKUP_SENT]) {

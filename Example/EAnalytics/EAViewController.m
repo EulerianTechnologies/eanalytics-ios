@@ -22,7 +22,7 @@
     [EAnalytics initWithHost:@"ett.eulerian.net" andWithDebugLogs:YES];
     
     NSLog(@"euidl : %@", [EAnalytics euidl]);
-    NSLog(@"sdkVersion : %@", [EAnalytics sdkVersion]);
+    NSLog(@"EAnalytics version : %@", [EAnalytics version]);
 }
 
 - (void)didReceiveMemoryWarning

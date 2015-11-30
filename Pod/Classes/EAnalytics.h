@@ -22,6 +22,6 @@
 + (void)initWithHost:(NSString *)host andWithDebugLogs:(BOOL) debug;
 + (void)track:(EAProperties *)properties;
 + (NSString*)euidl;
-+ (NSString*)sdkVersion;
++ (NSString*)version;
 
 @end
