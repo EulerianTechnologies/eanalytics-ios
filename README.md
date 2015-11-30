@@ -13,8 +13,7 @@ pod "EAnalytics"
 
 ### Example ###
 
-```
-#!objective-c
+```objective-c
 // Import EAnalytics into the class that wants to make use of the library
 #import "EAnalytics/EAnalytics.h"
 
@@ -35,24 +34,23 @@ EAProperties *prop = [[EAProperties alloc] initWithPath:@"my_prop_path"];
 
 Initialize the SDK with an valid host provided by Eulerian Technologies.
 
-```
-#!objective-c
+```objective-c
 [EAnalytics initWithHost:@"your.host.net" andWithDebugLogs:YES];
 ```
 
 ### Create properties ###
 
 Create any properties using:
-```
-#!objective-c
+
+```objective-c
 EAProperties *prop = [[EAProperties alloc] initWithPath:@"my_prop_path"];
 [prop setEulerianWithEmail:@"readme@mail.com"];
 [prop setEulerianWithLatitude:48.872731 longitude:2.356003];
 ```
 
 Add custom key to your properties:
-```
-#!objective-c
+
+```objective-c
 [prop setEulerianWithValue:@"custom_value" forKey:@"custom_key"];
 ```
 
@@ -69,8 +67,7 @@ You can use the set of convenient objects to track specific EA properties :
 
 Track properties using:
 
-```
-#!objective-c
+```objective-c
 [EAnalytics track:myProperties];
 ```
 
@@ -78,8 +75,7 @@ Track properties using:
 
 The SDK lets you access two of its property : the EUIDL and the current SDK version :
 
-```
-#!objective-c
+```objective-c
 [EAnalytics euidl];
 [EAnalytics version];
 ```
