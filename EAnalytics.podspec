@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = { :type => 'MIT' }
   s.author           = { "Eulerian Technologies" => "francois@eulerian.com" }
-  s.source           = { :git => "git@bitbucket.org:euleriantechnologies/eanalytics-ios.git", :tag => "v#{s.version}" }
+  s.source           = { :git => "https://bitbucket.org/euleriantechnologies/eanalytics-ios.git", :tag => "v#{s.version}" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '6.0'
