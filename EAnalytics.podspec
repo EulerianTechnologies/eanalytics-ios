@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "EAnalytics"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of EAnalytics."
+  s.version          = "1.3.0"
+  s.summary          = "iOS tracking library for Eulerian Technologies Analytics."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,14 +19,14 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/EAnalytics"
+  s.homepage         = "https://bitbucket.org/euleriantechnologies/eanalytics-ios"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "François Rouault" => "francois.rouault.fr@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/EAnalytics.git", :tag => s.version.to_s }
+  s.license          = 'Eulerian Technologies'
+  s.author           = { "Eulerian Technologies" => "francois@eulerian.com" }
+  s.source           = { :git => "git@bitbucket.org:euleriantechnologies/eanalytics-ios.git", :tag => "v#{s.version}" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
