@@ -1,4 +1,4 @@
-# Eulerian Analytics #
+# iOS SDK for Eulerian Analytics #
 
 ## Installation ##
 
