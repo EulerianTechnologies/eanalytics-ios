@@ -8,17 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name             = "EAnalytics"
-  s.version          = "1.3.0"
+  s.version          = "1.3.1"
   s.summary          = "iOS tracking library for Eulerian Technologies Analytics."
 
   # s.description      = <<-DESC
   #                     DESC
 
-  s.homepage         = "https://bitbucket.org/euleriantechnologies/eanalytics-ios"
+  s.homepage         = "https://github.com/EulerianTechnologies/eanalytics-ios"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = { :type => 'MIT' }
   s.author           = { "Eulerian Technologies" => "francois@eulerian.com" }
-  s.source           = { :git => "https://bitbucket.org/euleriantechnologies/eanalytics-ios.git", :tag => "v#{s.version}" }
+  s.source           = { :git => "https://github.com/EulerianTechnologies/eanalytics-ios.git", :tag => "v#{s.version}" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '6.0'
