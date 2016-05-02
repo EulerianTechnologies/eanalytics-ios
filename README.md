@@ -89,3 +89,7 @@ Eulerian Technologies
 ## License ##
 
 EAnalytics is available under the MIT license.
+
+# Tagging plan
+
+Link to [iOS tagging plan](https://github.com/EulerianTechnologies/eanalytics-ios/blob/master/TAGGINGPLAN.md)
