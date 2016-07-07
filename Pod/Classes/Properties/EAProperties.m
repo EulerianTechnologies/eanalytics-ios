@@ -23,7 +23,7 @@ static NSString* const KEY_GLOBAL_APPNAME = @"ea-appname";
 static NSString* const KEY_GLOBAL_EPOCH = @"ereplay-time";
 static NSString* const KEY_GLOBAL_IDFV = @"ea-ios-idfv";
 static NSString* const KEY_GLOBAL_IDFA = @"ea-ios-idfa";
-static NSString* const KEY_GLOBAL_ADTRACKING_ENABLED = @"ea-iso-islat";
+static NSString* const KEY_GLOBAL_ADTRACKING_ENABLED = @"ea-ios-islat";
 static NSString* const KEY_GLOBAL_APP_VERSION = @"ea-appversion";
 static NSString* const KEY_GLOBAL_APP_BUILD = @"ea-appversionbuild";
 //- keys pages
