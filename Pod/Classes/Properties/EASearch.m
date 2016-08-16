@@ -22,7 +22,7 @@ NSMutableDictionary *engine;
     self = [super initWithPath:path];
     if (self) {
         engine = [[NSMutableDictionary alloc] init];
-        [self setEulerianWithValue:name forKey:KEY_NAME];
+        [engine setObject:name forKey:KEY_NAME];
         [self setEngine];
     }
     return self;
