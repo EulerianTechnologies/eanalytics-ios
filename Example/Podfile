@@ -1,13 +1,12 @@
-source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
+#use_frameworks!
 
-target 'EAnalytics_Example', :exclusive => true do
-  pod "EAnalytics", :path => "../"
-end
+target 'EAnalytics_Example' do
+  pod 'EAnalytics', :path => '../'
 
-target 'EAnalytics_Tests', :exclusive => true do
-  pod "EAnalytics", :path => "../"
+  target 'EAnalytics_Tests' do
+    inherit! :search_paths
 
-  pod 'Specta'
+    pod 'Specta'
   pod 'Expecta'
+  end
 end
