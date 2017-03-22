@@ -10,3 +10,8 @@ target 'EAnalytics_Example' do
   pod 'Expecta'
   end
 end
+
+target 'EAnalytics_ExampleTV' do
+    pod 'EAnalytics', :path => '../'
+    
+end

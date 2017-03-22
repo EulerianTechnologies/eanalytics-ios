@@ -22,7 +22,13 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		7D5B0EF40789E81DDD7A85B7 /* libPods-EAnalytics_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 538DC9BDAB4BF07CCE831E23 /* libPods-EAnalytics_Example.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B45FB8F7A25D4930C70F25CF /* libPods-EAnalytics_ExampleTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */; };
 		D30D0F4CC957C1E945B43937 /* libPods-EAnalytics_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 819C9670B73BEEFBA3C22E8B /* libPods-EAnalytics_Tests.a */; };
+		F571CB961E82EC8D00FF7CF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F571CB951E82EC8D00FF7CF4 /* main.m */; };
+		F571CB991E82EC8D00FF7CF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F571CB981E82EC8D00FF7CF4 /* AppDelegate.m */; };
+		F571CB9C1E82EC8D00FF7CF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F571CB9B1E82EC8D00FF7CF4 /* ViewController.m */; };
+		F571CB9F1E82EC8D00FF7CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F571CB9D1E82EC8D00FF7CF4 /* Main.storyboard */; };
+		F571CBA11E82EC8D00FF7CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F571CBA01E82EC8D00FF7CF4 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0506D906504FD978A4E15434 /* Pods-EAnalytics_ExampleTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_ExampleTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV.debug.xcconfig"; sourceTree = "<group>"; };
 		538DC9BDAB4BF07CCE831E23 /* libPods-EAnalytics_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAnalytics_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* EAnalytics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAnalytics_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,7 +71,21 @@
 		A1A2B84749C66E1B164B4070 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A6E6A6C54DCE3312DE8AD973 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A83A7F00E78A32712552A99A /* Pods-EAnalytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_Tests/Pods-EAnalytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAnalytics_ExampleTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F9B7293EAF1FA6E830A0D2 /* Pods-EAnalytics_ExampleTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_ExampleTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV.release.xcconfig"; sourceTree = "<group>"; };
 		F0763735D4092F48F0814A10 /* Pods-EAnalytics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_Example/Pods-EAnalytics_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F571CB921E82EC8D00FF7CF4 /* EAnalytics_ExampleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAnalytics_ExampleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F571CB951E82EC8D00FF7CF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F571CB971E82EC8D00FF7CF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F571CB981E82EC8D00FF7CF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F571CB9A1E82EC8D00FF7CF4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F571CB9B1E82EC8D00FF7CF4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F571CB9E1E82EC8D00FF7CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F571CBA01E82EC8D00FF7CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F571CBA21E82EC8D00FF7CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F571CBA61E82EE7700FF7CF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		F571CBA81E82EE7C00FF7CF4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F571CBAA1E82EE8700FF7CF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +111,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F571CB8F1E82EC8D00FF7CF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45FB8F7A25D4930C70F25CF /* libPods-EAnalytics_ExampleTV.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +128,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for EAnalytics */,
 				6003F5B5195388D20070C39A /* Tests */,
+				F571CB931E82EC8D00FF7CF4 /* Example TV for EAnalytics */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				6FA7CA3C04FE881690D7BCA8 /* Pods */,
@@ -110,6 +140,7 @@
 			children = (
 				6003F58A195388D20070C39A /* EAnalytics_Example.app */,
 				6003F5AE195388D20070C39A /* EAnalytics_Tests.xctest */,
+				F571CB921E82EC8D00FF7CF4 /* EAnalytics_ExampleTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,12 +148,16 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F571CBAA1E82EE8700FF7CF4 /* Foundation.framework */,
+				F571CBA81E82EE7C00FF7CF4 /* UIKit.framework */,
+				F571CBA61E82EE7700FF7CF4 /* CoreGraphics.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				538DC9BDAB4BF07CCE831E23 /* libPods-EAnalytics_Example.a */,
 				819C9670B73BEEFBA3C22E8B /* libPods-EAnalytics_Tests.a */,
+				AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,8 +224,34 @@
 				F0763735D4092F48F0814A10 /* Pods-EAnalytics_Example.release.xcconfig */,
 				A83A7F00E78A32712552A99A /* Pods-EAnalytics_Tests.debug.xcconfig */,
 				68F012E8E05387DCDC548B4C /* Pods-EAnalytics_Tests.release.xcconfig */,
+				0506D906504FD978A4E15434 /* Pods-EAnalytics_ExampleTV.debug.xcconfig */,
+				E2F9B7293EAF1FA6E830A0D2 /* Pods-EAnalytics_ExampleTV.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F571CB931E82EC8D00FF7CF4 /* Example TV for EAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				F571CB971E82EC8D00FF7CF4 /* AppDelegate.h */,
+				F571CB981E82EC8D00FF7CF4 /* AppDelegate.m */,
+				F571CB9A1E82EC8D00FF7CF4 /* ViewController.h */,
+				F571CB9B1E82EC8D00FF7CF4 /* ViewController.m */,
+				F571CB9D1E82EC8D00FF7CF4 /* Main.storyboard */,
+				F571CBA01E82EC8D00FF7CF4 /* Assets.xcassets */,
+				F571CBA21E82EC8D00FF7CF4 /* Info.plist */,
+				F571CB941E82EC8D00FF7CF4 /* Supporting Files */,
+			);
+			name = "Example TV for EAnalytics";
+			path = EAnalytics_ExampleTV;
+			sourceTree = "<group>";
+		};
+		F571CB941E82EC8D00FF7CF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F571CB951E82EC8D00FF7CF4 /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +298,26 @@
 			productReference = 6003F5AE195388D20070C39A /* EAnalytics_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F571CB911E82EC8D00FF7CF4 /* EAnalytics_ExampleTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F571CBA51E82EC8D00FF7CF4 /* Build configuration list for PBXNativeTarget "EAnalytics_ExampleTV" */;
+			buildPhases = (
+				1662D17011EF8C233963A0D4 /* [CP] Check Pods Manifest.lock */,
+				F571CB8E1E82EC8D00FF7CF4 /* Sources */,
+				F571CB8F1E82EC8D00FF7CF4 /* Frameworks */,
+				F571CB901E82EC8D00FF7CF4 /* Resources */,
+				FD2DEA35BA09533D3463A1EF /* [CP] Embed Pods Frameworks */,
+				B909411B936457C5242F7246 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EAnalytics_ExampleTV;
+			productName = EAnalytics_ExampleTV;
+			productReference = F571CB921E82EC8D00FF7CF4 /* EAnalytics_ExampleTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,6 +333,11 @@
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					F571CB911E82EC8D00FF7CF4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AW8HXS3KFS;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -270,6 +356,7 @@
 			targets = (
 				6003F589195388D20070C39A /* EAnalytics_Example */,
 				6003F5AD195388D20070C39A /* EAnalytics_Tests */,
+				F571CB911E82EC8D00FF7CF4 /* EAnalytics_ExampleTV */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +380,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F571CB901E82EC8D00FF7CF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F571CBA11E82EC8D00FF7CF4 /* Assets.xcassets in Resources */,
+				F571CB9F1E82EC8D00FF7CF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -312,6 +408,21 @@
 			showEnvVarsInLog = 0;
 		};
 		0905B198958980F65F4FF2A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1662D17011EF8C233963A0D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,6 +497,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics_Tests/Pods-EAnalytics_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B909411B936457C5242F7246 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2DEA35BA09533D3463A1EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -404,6 +545,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F571CB8E1E82EC8D00FF7CF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F571CB9C1E82EC8D00FF7CF4 /* ViewController.m in Sources */,
+				F571CB991E82EC8D00FF7CF4 /* AppDelegate.m in Sources */,
+				F571CB961E82EC8D00FF7CF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +583,14 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F571CB9D1E82EC8D00FF7CF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F571CB9E1E82EC8D00FF7CF4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -585,6 +744,60 @@
 			};
 			name = Release;
 		};
+		F571CBA31E82EC8D00FF7CF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0506D906504FD978A4E15434 /* Pods-EAnalytics_ExampleTV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AW8HXS3KFS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = EAnalytics_ExampleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eulerian.EAnalytics-ExampleTV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		F571CBA41E82EC8D00FF7CF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F9B7293EAF1FA6E830A0D2 /* Pods-EAnalytics_ExampleTV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AW8HXS3KFS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = EAnalytics_ExampleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eulerian.EAnalytics-ExampleTV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,6 +827,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F571CBA51E82EC8D00FF7CF4 /* Build configuration list for PBXNativeTarget "EAnalytics_ExampleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F571CBA31E82EC8D00FF7CF4 /* Debug */,
+				F571CBA41E82EC8D00FF7CF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
