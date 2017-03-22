@@ -11,6 +11,8 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
+#define APPLE_TV UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomTV
+
 @interface UIDevice(Hardware)
 
 - (NSString *) platform;

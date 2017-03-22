@@ -26,6 +26,7 @@ static NSString* const KEY_GLOBAL_IDFA = @"ea-ios-idfa";
 static NSString* const KEY_GLOBAL_ADTRACKING_ENABLED = @"ea-ios-islat";
 static NSString* const KEY_GLOBAL_APP_VERSION = @"ea-appversion";
 static NSString* const KEY_GLOBAL_APP_BUILD = @"ea-appversionbuild";
+static NSString* const KEY_IS_TV = @"ea-apptv";
 //- keys pages
 static NSString* const KEY_PAGE_PATH = @"path";
 static NSString* const KEY_PAGE_LATITUDE = @"ea-lat";
@@ -59,13 +60,13 @@ static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
         [EAAssertion assertCondition:(path != nil) withMessage:@"Path cannot be undefined"];
         
         // MARK: - internal params
-        
         _dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                        [[UIDevice currentDevice] systemVersion], KEY_GLOBAL_EOS,
                        [[UIDevice currentDevice] model], KEY_GLOBAL_EHW,
                        [[UIDevice currentDevice] platform], KEY_GLOBAL_EHW_IDENTIFIER,
                        [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"], KEY_GLOBAL_APP_VERSION,
                        [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey], KEY_GLOBAL_APP_BUILD,
+                       @(APPLE_TV), KEY_IS_TV,
                        nil];
         
         NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
