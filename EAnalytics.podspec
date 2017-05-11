@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EAnalytics"
-  s.version          = "1.3.4"
+  s.version          = "1.3.5"
   s.summary          = "iOS tracking library for Eulerian Technologies Analytics."
 
   # s.description      = <<-DESC

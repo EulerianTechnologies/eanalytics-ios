@@ -31,7 +31,7 @@ dispatch_queue_t serialQueue;
 
 + (NSString *)version
 {
-    return @"1.3.4";
+    return @"1.3.5";
 }
 
 + (NSString*)euidl {
@@ -49,7 +49,8 @@ dispatch_queue_t serialQueue;
 
 + (void)initWithHost:(NSString *)host andWithDebugLogs:(BOOL) debug
 {
-    [EAAssertion assertCondition:[Utils testHost:host] withMessage:[NSString stringWithFormat:@"host %@ is not valid", host]];
+    [EAAssertion assertCondition:[Utils testHost:host] withMessage:[NSString stringWithFormat:@"Host '%@' is not valid", host]];
+    [EAAssertion assertCondition:([host rangeOfString:@".eulerian.com"].location == NSNotFound) withMessage: @"Host cannot contain '.eulerian.com'"];
     NSString *adSupportDetectedMsg = [AdIdentifier hasAdSupportFrameworkAdded] ? @"AdSupport framework detected" : @"AdSupport framework not detected -> IDFA will not be provided";
     NSLog(@"EULERIAN ANALYTICS : initialized with %@. Running lib v%@. %@.", host, [EAnalytics version], adSupportDetectedMsg);
     sDebug = debug;
