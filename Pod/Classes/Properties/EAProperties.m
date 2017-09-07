@@ -37,6 +37,7 @@ static NSString* const KEY_PAGE_PROFILE = @"profile";
 static NSString* const KEY_PAGE_GROUP = @"pagegroup";
 static NSString* const KEY_PAGE_ACTION = @"action";
 static NSString* const KEY_PAGE_PROPERTY = @"property";
+static NSString* const KEY_PAGE_CFLAG = @"cflag";
 static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
 
 - (NSString *)json
@@ -145,6 +146,11 @@ static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
 - (void)setEulerianWithProperties:(EAOSiteCentricProperties*)value
 {
     [_dictionary setObject:value.dictionary forKey:KEY_PAGE_PROPERTY];
+}
+
+- (void)setEulerianWithCFlag:(EAOSiteCentricCFlag*)value
+{
+    [_dictionary setObject:value.dictionary forKey:KEY_PAGE_CFLAG];
 }
 
 // MARK : other values

@@ -1,6 +1,6 @@
 PODS:
-  - EAnalytics (1.3.3)
-  - Expecta (1.0.5)
+  - EAnalytics (1.3.5)
+  - Expecta (1.0.6)
   - Specta (1.0.6)
 
 DEPENDENCIES:
@@ -10,13 +10,13 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   EAnalytics:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  EAnalytics: 6fdc0d2c6ba6ff165449fad13d7a9dd29a608059
-  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  EAnalytics: 2f2dc232ab46a34f65de99014b3923ff442669aa
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
 PODFILE CHECKSUM: c1a974d101ef6314062eb511f8da1808cc8cc890
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

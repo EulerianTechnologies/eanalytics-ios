@@ -33,7 +33,7 @@
 
 - (IBAction)clickButton:(id)sender
 {
-    [EAnalytics track:[self createProducts]];
+    [EAnalytics track:[self createProperties]];
 }
 
 - (EAProperties*)createProperties
@@ -44,6 +44,7 @@
     [prop setEulerianWithLatitude:1.34453 longitude:2.34245325];
     [prop setEulerianWithAction:[self createAction]];
     [prop setEulerianWithProperties:[self createSiteCentric]];
+    [prop setEulerianWithCFlag:[self createSiteCentricCFlag]];
     return prop;
 }
 
@@ -60,6 +61,15 @@
 {
     EAOSiteCentricProperties *siteCentric = [[EAOSiteCentricProperties alloc] init];
     [siteCentric setEulerianWithValues:@[@"my_value_site_centric_0", @"my_value_site_centric_1"] forKey:@"my_key_site_centric"];
+    return siteCentric;
+}
+
+- (EAOSiteCentricCFlag *)createSiteCentricCFlag
+{
+    EAOSiteCentricCFlag *siteCentric = [[EAOSiteCentricCFlag alloc] init];
+    [siteCentric setEulerianWithValues:@[@"rolandgarros", @"wimbledon"] forKey:@"category_1"];
+    [siteCentric setEulerianWithValues:@[@"tennis"] forKey:@"category_2"];
+    [siteCentric setEulerianWithValues:@[@"us open"] forKey:@"category_3"];
     return siteCentric;
 }
 

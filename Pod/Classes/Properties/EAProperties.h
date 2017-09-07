@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "EAOAction.h"
 #import "EAOSiteCentricProperties.h"
+#import "EAOSiteCentricCFlag.h"
 #import "EAOProduct.h"
 #import <CoreLocation/CoreLocation.h>
 
@@ -28,6 +29,7 @@
 - (void)setEulerianWithNewCustomer:(BOOL)value;
 - (void)setEulerianWithAction:(EAOAction*)value;
 - (void)setEulerianWithProperties:(EAOSiteCentricProperties*)value;
+- (void)setEulerianWithCFlag:(EAOSiteCentricCFlag*)value;
 - (void)setEulerianWithValue:(id)value forKey:(NSString *)key;
 
 @end
