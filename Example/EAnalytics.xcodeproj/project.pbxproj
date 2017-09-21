@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A699EF89EE6CF1E250087D8 /* libPods-EAnalytics Demo Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4C0DC3925612A2702F0D69 /* libPods-EAnalytics Demo Swift.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,6 +25,11 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B45FB8F7A25D4930C70F25CF /* libPods-EAnalytics_ExampleTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */; };
 		D30D0F4CC957C1E945B43937 /* libPods-EAnalytics_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 819C9670B73BEEFBA3C22E8B /* libPods-EAnalytics_Tests.a */; };
+		F555C6C01F73F915003DD70D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555C6BF1F73F915003DD70D /* AppDelegate.swift */; };
+		F555C6C21F73F915003DD70D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555C6C11F73F915003DD70D /* ViewController.swift */; };
+		F555C6C51F73F915003DD70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F555C6C31F73F915003DD70D /* Main.storyboard */; };
+		F555C6C71F73F915003DD70D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F555C6C61F73F915003DD70D /* Assets.xcassets */; };
+		F555C6CA1F73F915003DD70D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F555C6C81F73F915003DD70D /* LaunchScreen.storyboard */; };
 		F571CB961E82EC8D00FF7CF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F571CB951E82EC8D00FF7CF4 /* main.m */; };
 		F571CB991E82EC8D00FF7CF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F571CB981E82EC8D00FF7CF4 /* AppDelegate.m */; };
 		F571CB9C1E82EC8D00FF7CF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F571CB9B1E82EC8D00FF7CF4 /* ViewController.m */; };
@@ -43,7 +49,10 @@
 
 /* Begin PBXFileReference section */
 		0506D906504FD978A4E15434 /* Pods-EAnalytics_ExampleTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_ExampleTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV.debug.xcconfig"; sourceTree = "<group>"; };
+		337F4810E1E03837E7C52452 /* Pods-EAnalytics Demo Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics Demo Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics Demo Swift/Pods-EAnalytics Demo Swift.release.xcconfig"; sourceTree = "<group>"; };
 		538DC9BDAB4BF07CCE831E23 /* libPods-EAnalytics_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAnalytics_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5823CC44EDAB286689EC88FA /* Pods-EAnalytics Demo Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics Demo Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics Demo Swift/Pods-EAnalytics Demo Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		5D4C0DC3925612A2702F0D69 /* libPods-EAnalytics Demo Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAnalytics Demo Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* EAnalytics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAnalytics_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +83,14 @@
 		AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAnalytics_ExampleTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F9B7293EAF1FA6E830A0D2 /* Pods-EAnalytics_ExampleTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_ExampleTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV.release.xcconfig"; sourceTree = "<group>"; };
 		F0763735D4092F48F0814A10 /* Pods-EAnalytics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_Example/Pods-EAnalytics_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F555C6BD1F73F915003DD70D /* EAnalytics Demo Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EAnalytics Demo Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F555C6BF1F73F915003DD70D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F555C6C11F73F915003DD70D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F555C6C41F73F915003DD70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F555C6C61F73F915003DD70D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F555C6C91F73F915003DD70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F555C6CB1F73F915003DD70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F555C6CF1F741B25003DD70D /* EAnalytics Demo Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EAnalytics Demo Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		F571CB921E82EC8D00FF7CF4 /* EAnalytics_ExampleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAnalytics_ExampleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F571CB951E82EC8D00FF7CF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F571CB971E82EC8D00FF7CF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +128,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F555C6BA1F73F915003DD70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A699EF89EE6CF1E250087D8 /* libPods-EAnalytics Demo Swift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F571CB8F1E82EC8D00FF7CF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +154,7 @@
 				6003F593195388D20070C39A /* Example for EAnalytics */,
 				6003F5B5195388D20070C39A /* Tests */,
 				F571CB931E82EC8D00FF7CF4 /* Example TV for EAnalytics */,
+				F555C6BE1F73F915003DD70D /* EAnalytics Demo Swift */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				6FA7CA3C04FE881690D7BCA8 /* Pods */,
@@ -141,6 +167,7 @@
 				6003F58A195388D20070C39A /* EAnalytics_Example.app */,
 				6003F5AE195388D20070C39A /* EAnalytics_Tests.xctest */,
 				F571CB921E82EC8D00FF7CF4 /* EAnalytics_ExampleTV.app */,
+				F555C6BD1F73F915003DD70D /* EAnalytics Demo Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +185,7 @@
 				538DC9BDAB4BF07CCE831E23 /* libPods-EAnalytics_Example.a */,
 				819C9670B73BEEFBA3C22E8B /* libPods-EAnalytics_Tests.a */,
 				AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */,
+				5D4C0DC3925612A2702F0D69 /* libPods-EAnalytics Demo Swift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,8 +254,24 @@
 				68F012E8E05387DCDC548B4C /* Pods-EAnalytics_Tests.release.xcconfig */,
 				0506D906504FD978A4E15434 /* Pods-EAnalytics_ExampleTV.debug.xcconfig */,
 				E2F9B7293EAF1FA6E830A0D2 /* Pods-EAnalytics_ExampleTV.release.xcconfig */,
+				5823CC44EDAB286689EC88FA /* Pods-EAnalytics Demo Swift.debug.xcconfig */,
+				337F4810E1E03837E7C52452 /* Pods-EAnalytics Demo Swift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F555C6BE1F73F915003DD70D /* EAnalytics Demo Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F555C6BF1F73F915003DD70D /* AppDelegate.swift */,
+				F555C6C11F73F915003DD70D /* ViewController.swift */,
+				F555C6C31F73F915003DD70D /* Main.storyboard */,
+				F555C6C61F73F915003DD70D /* Assets.xcassets */,
+				F555C6C81F73F915003DD70D /* LaunchScreen.storyboard */,
+				F555C6CB1F73F915003DD70D /* Info.plist */,
+				F555C6CF1F741B25003DD70D /* EAnalytics Demo Swift-Bridging-Header.h */,
+			);
+			path = "EAnalytics Demo Swift";
 			sourceTree = "<group>";
 		};
 		F571CB931E82EC8D00FF7CF4 /* Example TV for EAnalytics */ = {
@@ -298,6 +342,26 @@
 			productReference = 6003F5AE195388D20070C39A /* EAnalytics_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F555C6BC1F73F915003DD70D /* EAnalytics Demo Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F555C6CE1F73F915003DD70D /* Build configuration list for PBXNativeTarget "EAnalytics Demo Swift" */;
+			buildPhases = (
+				B84817B654A47B4CBE5C15CE /* [CP] Check Pods Manifest.lock */,
+				F555C6B91F73F915003DD70D /* Sources */,
+				F555C6BA1F73F915003DD70D /* Frameworks */,
+				F555C6BB1F73F915003DD70D /* Resources */,
+				7ED010386B82347E27C4A4ED /* [CP] Embed Pods Frameworks */,
+				1C82CC8C3D42E312B88FA4C3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EAnalytics Demo Swift";
+			productName = "EAnalytics Demo Swift";
+			productReference = F555C6BD1F73F915003DD70D /* EAnalytics Demo Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F571CB911E82EC8D00FF7CF4 /* EAnalytics_ExampleTV */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F571CBA51E82EC8D00FF7CF4 /* Build configuration list for PBXNativeTarget "EAnalytics_ExampleTV" */;
@@ -325,6 +389,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EA;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "François Rouault";
 				TargetAttributes = {
@@ -333,6 +398,12 @@
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					F555C6BC1F73F915003DD70D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AW8HXS3KFS;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 					F571CB911E82EC8D00FF7CF4 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -357,6 +428,7 @@
 				6003F589195388D20070C39A /* EAnalytics_Example */,
 				6003F5AD195388D20070C39A /* EAnalytics_Tests */,
 				F571CB911E82EC8D00FF7CF4 /* EAnalytics_ExampleTV */,
+				F555C6BC1F73F915003DD70D /* EAnalytics Demo Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -377,6 +449,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F555C6BB1F73F915003DD70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F555C6CA1F73F915003DD70D /* LaunchScreen.storyboard in Resources */,
+				F555C6C71F73F915003DD70D /* Assets.xcassets in Resources */,
+				F555C6C51F73F915003DD70D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +519,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		1C82CC8C3D42E312B88FA4C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics Demo Swift/Pods-EAnalytics Demo Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2AEADF74D068832C63DC4FB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,6 +579,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics_Example/Pods-EAnalytics_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7ED010386B82347E27C4A4ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics Demo Swift/Pods-EAnalytics Demo Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		96905DF2D3F23DA96BD3D27C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +607,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAnalytics_Tests/Pods-EAnalytics_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84817B654A47B4CBE5C15CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B909411B936457C5242F7246 /* [CP] Copy Pods Resources */ = {
@@ -548,6 +675,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F555C6B91F73F915003DD70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F555C6C21F73F915003DD70D /* ViewController.swift in Sources */,
+				F555C6C01F73F915003DD70D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F571CB8E1E82EC8D00FF7CF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,6 +719,22 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F555C6C31F73F915003DD70D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F555C6C41F73F915003DD70D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F555C6C81F73F915003DD70D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F555C6C91F73F915003DD70D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		F571CB9D1E82EC8D00FF7CF4 /* Main.storyboard */ = {
@@ -744,6 +896,65 @@
 			};
 			name = Release;
 		};
+		F555C6CC1F73F915003DD70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5823CC44EDAB286689EC88FA /* Pods-EAnalytics Demo Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AW8HXS3KFS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "EAnalytics Demo Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eulerian.EAnalytics-Demo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "EAnalytics Demo Swift/EAnalytics Demo Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F555C6CD1F73F915003DD70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 337F4810E1E03837E7C52452 /* Pods-EAnalytics Demo Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AW8HXS3KFS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "EAnalytics Demo Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eulerian.EAnalytics-Demo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EAnalytics Demo Swift/EAnalytics Demo Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		F571CBA31E82EC8D00FF7CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0506D906504FD978A4E15434 /* Pods-EAnalytics_ExampleTV.debug.xcconfig */;
@@ -828,6 +1039,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F555C6CE1F73F915003DD70D /* Build configuration list for PBXNativeTarget "EAnalytics Demo Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F555C6CC1F73F915003DD70D /* Debug */,
+				F555C6CD1F73F915003DD70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F571CBA51E82EC8D00FF7CF4 /* Build configuration list for PBXNativeTarget "EAnalytics_ExampleTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -835,6 +1055,7 @@
 				F571CBA41E82EC8D00FF7CF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,6 +1,6 @@
 #use_frameworks!
 
-target 'EAnalytics_Example' do
+target 'EAnalytics_Example' do
   pod 'EAnalytics', :path => '../'
 
   target 'EAnalytics_Tests' do
@@ -14,4 +14,8 @@ end
 target 'EAnalytics_ExampleTV' do
     pod 'EAnalytics', :path => '../'
     
+end
+
+target 'EAnalytics Demo Swift' do
+    pod 'EAnalytics', :path => '../'
 end
