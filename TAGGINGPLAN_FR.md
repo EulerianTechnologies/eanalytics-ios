@@ -541,7 +541,7 @@ EAnalytics.track(orderPage)
 
 L'objet EAOSiteCentricCFlag est la classe dédiée au context flag.
 
-Vous pouvez donc creer un ou plusieurs context flag via l'objet EAOSiteCentricCFlag et avec la function "setEulerianWithValues" qui prend la valeur (une ou plusieurs) et la clé du context flag.
+Vous pouvez donc creer un ou plusieurs context flag via l'objet EAOSiteCentricCFlag et avec la function "setEulerianWithValues" qui prend la valeur (une ou plusieurs) et la clé du context flag. Le nombre maximum de values possibles est de 10.
 
 __**Exemple:**__
 
