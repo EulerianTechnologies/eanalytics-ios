@@ -536,3 +536,26 @@ orderPage.addEulerian(product1, 60.00, 1)
 orderPage.addEulerian(product2, 400.00, 1)
 EAnalytics.track(orderPage)
 ```
+
+# Context Flag (CFLAG)
+
+L'objet EAOSiteCentricCFlag est la classe dédiée au context flag.
+
+Vous pouvez donc creer un ou plusieurs context flag via l'objet EAOSiteCentricCFlag et avec la function "setEulerianWithValues" qui prend la valeur (une ou plusieurs) et la clé du context flag.
+
+__**Exemple:**__
+
+```xml
+
+let cFlag = EAOSiteCentricCFlag()
+cFlag.setEulerianWithValues(["val1", "val2","val3"], forKey: "key1")
+cFlag.setEulerianWithValues(["valA"], forKey: "keyA")
+
+
+let genericTag = EAProperties(path: "NOM_PAGE")
+genericPage.setEulerianWith(cFlag)
+genericTag.setEulerian(uid: "UID")
+genericTag.setEulerian("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+EAnalytics.track(genericTag)
+```
+
