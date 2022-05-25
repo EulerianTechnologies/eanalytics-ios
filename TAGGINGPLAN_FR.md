@@ -185,7 +185,7 @@ param1.setEulerianWithStringValue(value: String!, forKey: String!)
 param1.setEulerianWithStringValue(value: String!, forKey: String!)
 
 //link param1 to product1
-product1.setEulerian(params: param1)
+product1.setEulerianWith(params: param1)
        
 //product page
 let productPage = EAProducts(path: String!)
@@ -214,7 +214,7 @@ param1.setEulerianWithStringValue("Vetements", forKey: "univers")
 param1.setEulerianWithStringValue("Pantalons", forKey: "category")
 
 //link param1 to product1
-product1.setEulerian(params: param1)
+product1.setEulerianWith(param1)
        
 //product page
 let productPage = EAProducts(path: "Pantalon|Jean|Jean_noir_marque")
