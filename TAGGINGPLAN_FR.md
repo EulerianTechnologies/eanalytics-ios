@@ -117,9 +117,12 @@ Pour ajouter un nouveau paramètre, utilisez la méthode **setEulerian(CLE, "VAL
 __**Exemple .swift:**__
 
 ```xml
-let genericTag = EAProperties(path: "NOM_PAGE")
-genericTag.setEulerian(uid: "UID")
-genericTag.setEulerian("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+let genericTag = EAProperties(path: String!)
+genericTag.setEulerianWithUid(value: String!)
+genericTag.setEulerianWithEmail(value: String!)
+genericTag.setEulerianWithProfile(value: String!)
+genericTag.setEulerianWithPageGroup(value: String!)
+genericTag.setEulerianWithValue(value: Any!, forKey: String!)
 EAnalytics.track(genericTag)
 ```
 
@@ -127,8 +130,11 @@ __**Avec valeurs:**__
 
 ```xml
 let genericTag = EAProperties(path: "|univers|rubrique|page")
-genericTag.setEulerian(uid: "5434742")
-genericTag.setEulerian("mensuel", forKey: "abonnement")
+genericTag.setEulerianWithUid("5434742")
+genericTag.setEulerianWithEmail("test@test.fr")
+genericTag.setEulerianWithProfile("visitor")
+genericTag.setEulerianWithPageGroup("pagegroup")
+genericTag.setEulerianWithValue("mensuel", forKey: "abonnement")
 EAnalytics.track(genericTag)
 ```
 
@@ -165,39 +171,58 @@ Une fois **EAOProduct** initialisé et complété, intégrez le à l'objet EAPro
 __**Exemple:**__
 
 ```xml
-let product1 = EAOProduct(ref: "ID_PRODUIT")
-product1.setEulerian(name: "NOM_PRODUIT")
-product1.setEulerian(group: "GROUPE")
+//create object product
+let product1 = EAOProduct(ref: String)
+product1.setEulerianWithName(value: String)
+product1.setEulerianWithGroup(value: String)
 
+//product parameter
 let param1 = EAOParams()
-param1.setEulerian(stringValue:"VALEUR_PARAM", forKey:"NOM_PARAM")
-param1.setEulerian(stringValue:"MARQUE", forKey:"marque")
-param1.setEulerian(stringValue:"CATEGORIE", forKey:"categorie")
+param1.setEulerianWithStringValue(value: String!, forKey: String!)
+param1.setEulerianWithStringValue(value: String!, forKey: String!)
 
+//link param1 to product1
 product1.setEulerian(params: param1)
        
-let productPage = EAProducts(path: "NOM_PAGE")
-productPage.setEulerian(uid: "UID")
-productPage.setEulerian(product1)
+//product page
+let productPage = EAProducts(path: String!)
+productPage.setEulerianWithUid(value: String!)
+productPage.setEulerianWithEmail(value: String!)
+productPage.setEulerianWithProfile(value: String!)
+productPage.setEulerianWithPageGroup(value: String!)
+productPage.setEulerianWithValue(value: Any!, forKey: String!)
+
+//link product1 to the product page
+productPage.setEulerianWith(eaoproducts: [Any]!)
 EAnalytics.track(productPage)
 ```
 
 __**Avec valeurs:**__
 
 ```xml
+//create object product
 let product1 = EAOProduct(ref: "PH774356")
-product1.setEulerian(name: "Jean_noir_marque")
-product1.setEulerian(group: "A")
+product1.setEulerianWithName("Jean_noir_marque")
+product1.setEulerianWithGroup("my-group")
 
+//product parameter
 let param1 = EAOParams()
-param1.setEulerian(stringValue:"Vetements", forKey:"univers")
-param1.setEulerian(stringValue:"Pantalons", forKey:"categorie")
+param1.setEulerianWithStringValue("Vetements", forKey: "univers")
+param1.setEulerianWithStringValue("Pantalons", forKey: "category")
 
+//link param1 to product1
 product1.setEulerian(params: param1)
        
+//product page
 let productPage = EAProducts(path: "Pantalon|Jean|Jean_noir_marque")
-productPage.setEulerian(uid: "54367")
-productPage.setEulerian(product1)
+productPage.setEulerianWithUid("5434742")
+productPage.setEulerianWithEmail("test@test.fr")
+productPage.setEulerianWithProfile("visitor")
+productPage.setEulerianWithPageGroup("pagegroup")
+productPage.setEulerianWithValue("mensuel", forKey: "abonnement")
+
+//link product1 to the product page
+productPage.setEulerianWith(product1)
 EAnalytics.track(productPage)
 ```
 
