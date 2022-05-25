@@ -34,9 +34,12 @@ La documentation disponible à [cette adresse](https://eulerian.wiki/doku.php?id
 Dans le cas d'une application native, notre SDK doit être incorporé au code source de l'application pour pouvoir intégrer le type de marqueur suivant: 
 
 ```xml
-let genericTag = EAProperties(path: "NOM_PAGE")
-genericTag.setEulerian(uid: "UID")
-genericTag.setEulerian("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+let genericTag = EAProperties(path: "|univers|rubrique|page")
+genericTag.setEulerianWithUid("5434742")
+genericTag.setEulerianWithEmail("test@test.fr")
+genericTag.setEulerianWithProfile("visitor")
+genericTag.setEulerianWithPageGroup("pagegroup")
+genericTag.setEulerianWithValue("mensuel", forKey: "abonnement")
 EAnalytics.track(genericTag)
 ```
 
