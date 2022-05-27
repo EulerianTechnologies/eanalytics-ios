@@ -34,9 +34,11 @@ La documentación disponible en [esta dirección](https://eulerian.wiki/doku.php
 En el caso de una aplicación nativa, nuestra SDK debe incorporarse al código de la aplicación para poder integrar el tipo de marcador siguiente: 
 
 ```xml
-let genericTag = EAProperties(path: "NOM_PAGE")
-genericTag.setEulerian(uid: "UID")
-genericTag.setEulerian("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+let genericTag = EAProperties(path: "generic-page")
+genericTag.setEulerianWithPageGroup("my-pagegroup")
+genericTag.setEulerianWithUid("123asd")
+genericTag.setEulerianWithEmail("test@test.fr")
+genericTag.setEulerianWithProfile("visitor")
 EAnalytics.track(genericTag)
 ```
 
@@ -117,18 +119,22 @@ Para añadir un nuevo parámetro, usa el método **setEulerian(LLAVE, "VALOR")**
 __**Ejemplo .swift:**__
 
 ```xml
-let genericTag = EAProperties(path: "NOM_PAGE")
-genericTag.setEulerian(uid: "UID")
-genericTag.setEulerian("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+let genericTag = EAProperties(path: String!)
+genericTag.setEulerianWithPageGroup(value: String!)
+genericTag.setEulerianWithUid(value: String!)
+genericTag.setEulerianWithEmail(value: String!)
+genericTag.setEulerianWithProfile(value: String!)
 EAnalytics.track(genericTag)
 ```
 
 __**Con valores:**__
 
 ```xml
-let genericTag = EAProperties(path: "|univers|rubrique|page")
-genericTag.setEulerian(uid: "5434742")
-genericTag.setEulerian("mensuel", forKey: "abonnement")
+let genericTag = EAProperties(path: "generic-page")
+genericTag.setEulerianWithPageGroup("my-pagegroup")
+genericTag.setEulerianWithUid("123asd")
+genericTag.setEulerianWithEmail("test@test.fr")
+genericTag.setEulerianWithProfile("visitor")
 EAnalytics.track(genericTag)
 ```
 
@@ -164,39 +170,56 @@ Una vez se ha iniciado y completado el **EAOProduct**, integra el objeto EAProdu
 __**Ejemplo:**__
 
 ```xml
-let product1 = EAOProduct(ref: "ID_PRODUIT")
-product1.setEulerian(name: "NOM_PRODUIT")
-product1.setEulerian(group: "GROUPE")
+//create object product
+let product1 = EAOProduct(ref: String)
+product1.setEulerianWithName(value: String)
+product1.setEulerianWithGroup(value: String)
 
+//product parameter
 let param1 = EAOParams()
-param1.setEulerian(stringValue:"VALEUR_PARAM", forKey:"NOM_PARAM")
-param1.setEulerian(stringValue:"MARQUE", forKey:"marque")
-param1.setEulerian(stringValue:"CATEGORIE", forKey:"categorie")
+param1.setEulerianWithStringValue(value: String!, forKey: String!)
+param1.setEulerianWithStringValue(value: String!, forKey: String!)
 
-product1.setEulerian(params: param1)
+//link param1 to product1
+product1.setEulerianWith(params: param1)
        
-let productPage = EAProducts(path: "NOM_PAGE")
-productPage.setEulerian(uid: "UID")
-productPage.setEulerian(product1)
+//product page
+let productPage = EAProducts(path: String!)
+productPage.setEulerianWithPageGroup(value: String!)
+productPage.setEulerianWithUid(value: String!)
+productPage.setEulerianWithEmail(value: String!)
+productPage.setEulerianWithProfile(value: String!)
+
+//link product1 to the product page
+productPage.setEulerianWith(eaoproducts: Any!)
 EAnalytics.track(productPage)
 ```
 
 __**Con valores:**__
 
 ```xml
+//create object product
 let product1 = EAOProduct(ref: "PH774356")
-product1.setEulerian(name: "Jean_noir_marque")
-product1.setEulerian(group: "A")
+product1.setEulerianWithName("T-shirt")
+product1.setEulerianWithGroup("product-group")
 
+//product parameter
 let param1 = EAOParams()
-param1.setEulerian(stringValue:"Vetements", forKey:"univers")
-param1.setEulerian(stringValue:"Pantalons", forKey:"categorie")
+param1.setEulerianWithStringValue("clothes", forKey: "category")
+param1.setEulerianWithStringValue("sportswear", forKey: "sub-category")
 
-product1.setEulerian(params: param1)
+//link param1 to product1
+product1.setEulerianWith(param1)
        
-let productPage = EAProducts(path: "Pantalon|Jean|Jean_noir_marque")
-productPage.setEulerian(uid: "54367")
-productPage.setEulerian(product1)
+//product page
+let productPage = EAProducts(path: "product-page")
+productPage.setEulerianWithPageGroup("my-pagegroup")
+productPage.setEulerianWithUid("123asd")
+productPage.setEulerianWithEmail("test@test.fr")
+productPage.setEulerianWithProfile("looker")
+
+//link product1 to the product page
+productPage.setEulerianWith(product1)
 EAnalytics.track(productPage)
 ```
 
@@ -225,14 +248,19 @@ El producto debe ser creado a través del objeto **EAOProduct** que se convierte
 __**Ejemplo:**__
 
 ```xml
-let product1 = EAOProduct(ref: "ID_PRODUIT_1")
-let product2 = EAOProduct(ref: "ID_PRODUIT_2")
-let product3 = EAOProduct(ref: "ID_PRODUIT_3")
+let product1 = EAOProduct(ref: String)
+let product2 = EAOProduct(ref: String)
+let product3 = EAOProduct(ref: String)
  
-let resultPage = EAProducts(path: "NOM_PAGE")
-resultPage.setEulerian(uid: "UID")
-resultPage.setEulerian(product1,product2,product3)
-EAnalytics.track(resultPage)
+let categoryPage = EAProducts(path: String!)
+categoryPage.setEulerianWithPageGroup(value: String!)
+categoryPage.setEulerianWithUid(value: String!)
+categoryPage.setEulerianWithEmail(value: String!)
+categoryPage.setEulerianWith(product1)
+categoryPage.setEulerianWith(product2)
+categoryPage.setEulerianWith(product3)
+
+EAnalytics.track(categoryPage)
 ```
 
 __**Con valores:**__
@@ -241,11 +269,16 @@ __**Con valores:**__
 let product1 = EAOProduct(ref: "CH32452")
 let product2 = EAOProduct(ref: "C654322")
 let product3 = EAOProduct(ref: "V643536")
- 
-let resultPage = EAProducts(path: "Categorie|Vestes")
-resultPage.setEulerian(uid: "78463")
-resultPage.setEulerian(product1,product2,product3)
-EAnalytics.track(resultPage)
+
+let categoryPage = EAProducts(path: "Category-page")
+categoryPage.setEulerianWithPageGroup("my-pagegroup")
+categoryPage.setEulerianWithUid("123asd")
+categoryPage.setEulerianWithEmail("test@test.fr")
+categoryPage.setEulerianWith(product1)
+categoryPage.setEulerianWith(product2)
+categoryPage.setEulerianWith(product3)
+
+EAnalytics.track(categoryPage)
 ```
 
 # Página de motor de búsqueda
@@ -274,30 +307,34 @@ Crea un objeto **Params** y usa el método **setEulerian** para los parámetros 
 __**Ejemplo:**__
 
 ```xml
-let params1 = EAOParams()
-params1.setEulerian(stringValue:"VALEUR_DU_PARAMETRE_RECHERCHE_1", forKey:"CLE_DU_PARAMETRE_RECHERCHE_1")
-params1.setEulerian(stringValue:"VALEUR_DU_PARAMETRE_RECHERCHE_2", forKey:"CLE_DU_PARAMETRE_RECHERCHE_2")
-params1.setEulerian(stringValue:"VALEUR_DU_PARAMETRE_RECHERCHE_3", forKey:"CLE_DU_PARAMETRE_RECHERCHE_3")
-
-let searchPage = EASearch(path: "NOM_PAGE", name: "NOM_MOTEUR_DE_RECHERCHE")
-searchPage.setEulerian(uid: "UID")
-searchPage.setEulerian(results: NOMBRE_DE_RESULTATS)
-searchPage.setEulerian(params: params1)
+let params = EAOParams()
+params.setEulerianWithStringValue(value: String!, forKey: String!)
+params.setEulerianWithStringValue(value: String!, forKey: String!)
+params.setEulerianWithStringValue(value: String!, forKey: String!)
+ 
+let search = EASearch(path: String!, withName: String!)
+searchPage.setEulerianWithPageGroup(value: String!)
+searchPage.setEulerianWithUid(value: String!)
+searchPage.setEulerianWithEmail(value: String!)
+searchPage.setEulerianWithResults(Int32!)
+searchPage.setEulerianWith(EAOParams!)
 EAnalytics.track(searchPage)
 ```
 
 __**Con valores:**__
 
 ```xml
-let params1 = EAOParams()
-params1.setEulerian(stringValue:"veste", forKey:"motcle")
-params1.setEulerian(stringValue:"100.00", forKey:"montant_min")
-params1.setEulerian(stringValue:"400.00", forKey:"montant_max")
+let params = EAOParams()
+params.setEulerianWithStringValue("t-shirt", forKey: "my-search-bar")
+params.setEulerianWithStringValue("100.00", forKey:"prix_min")
+params.setEulerianWithStringValue("400.00", forKey:"prix_max")
 
-let searchPage = EASearch(path: "Moteur_interne|veste", name: "moteur_interne")
-searchPage.setEulerian(uid: "65478")
-searchPage.setEulerian(results: 119)
-searchPage.setEulerian(params: params1)
+let searchPage = EASearch(path: "search-engine-page", name: "name-internal-search-engine")
+searchPage.setEulerianWithPageGroup("my-pagegroup")
+searchPage.setEulerianWithUid("123asd")
+searchPage.setEulerianWithEmail("test@test.fr")
+searchPage.setEulerianWithResults(20)
+searchPage.setEulerianWith(params)
 EAnalytics.track(searchPage)
 ```
 
@@ -323,8 +360,8 @@ Utiliza el método **set** con la clave de **__error__** para indicar la página
 __**Ejemplo:**__
 
 ```xml
-let errorTag = EAProperties(path: "NOM_PAGE")
-errorTag.setEulerian("1", forKey: "error")
+let errorTag = EAProperties(path: "error-page")
+errorTag.setEulerianWithValue(1, forKey: "error")
 EAnalytics.track(errorTag)
 ```
 
@@ -370,30 +407,46 @@ Cada objeto **EAOProduct** debe iniciarse y completarse con los parámetros eleg
 **Ejemplo:**
 
 ```xml
-let product1 = EAOProduct(ref: "ID_PRODUIT_1")
-let product2 = EAOProduct(ref: "ID_PRODUIT_2")
- 
-let estimatePage = EAEstimate(path: "NOM_PAGE", ref: "REF")
-estimatePage.setEulerian(uid: "UID")
-estimatePage.setEulerian(amount: MONTANT_DU_DEVIS)
-estimatePage.setEulerian(currency: "DEVISE_DU_MONTANT")
-estimatePage.setEulerian(type: "TYPE_DE_DEVIS")
-estimatePage.addEulerian(product1, MONTANT_PRODUIT, QUANTITE_PRODUIT)
-estimatePage.addEulerian(product2, MONTANT_PRODUIT, QUANTITE_PRODUIT)
+let product1 = EAOProduct(ref: String!)
+let product2 = EAOProduct(ref: String!)
+         
+let estimatePage = EAEstimate(path: String!, withRef: String!)
+estimatePage.setEulerianWithPageGroup(value: String!)
+estimatePage.setEulerianWithUid(value: String!)
+estimatePage.setEulerianWithEmail(value: String!)
+estimatePage.setEulerianWithType(value: String!)
+estimatePage.setEulerianWithAmount(value: Double!)
+estimatePage.setEulerianWithCurrency(value: String!)
+
+//custom parameter
+estimatePage.setEulerianWithValue(value: Any!, forKey: String!)
+estimatePage.setEulerianWithValue(value: Any!, forKey: String!)
+
+estimatePage.addEulerian(product: EAOProduct!, amount: Double, quantity: Int32)
+estimatePage.addEulerian(product: EAOProduct!, amount: Double, quantity: Int32)
 EAnalytics.track(estimatePage)
 ```
 
 **Con valores:**
 
 ```xml
-let product1 = EAOProduct(ref: "C12345")
- 
-let estimatePage = EAEstimate(path: "Croisiere|devis", ref: "DE9876543")
-estimatePage.setEulerian(uid: "65483")
-estimatePage.setEulerian(amount: 1200.00)
-estimatePage.setEulerian(currency: "EUR")
-estimatePage.setEulerian(type: "Croisiere")
-estimatePage.addEulerian(product1, 1200.00, 1)
+let product1 = EAOProduct(ref: "product1")
+let product2 = EAOProduct(ref: "product2")
+         
+let estimatePage = EAEstimate(path: "page-devis", withRef: "ref-devis-123")
+estimatePage.setEulerianWithPageGroup("my-pagegroup")
+estimatePage.setEulerianWithUid("123asd")
+estimatePage.setEulerianWithEmail("test@test.fr")
+estimatePage.setEulerianWithType("my-estimate-type")
+estimatePage.setEulerianWithAmount(12.34)
+estimatePage.setEulerianWithCurrency("EUR")
+
+//custom parameter
+estimatePage.setEulerianWithValue("VALUE1", forKey: "MY_KEY1")
+estimatePage.setEulerianWithValue("VALUE2", forKey: "MY_KEY2")
+
+estimatePage.addEulerian(product1, amount: 11.34, quantity: 1)
+estimatePage.addEulerian(product2, amount: 1, quantity: 1)
 EAnalytics.track(estimatePage)
 ```
 
@@ -426,28 +479,78 @@ Cada objeto **EAOProduct** debe iniciarse y completarse con los parámetros dese
 __**Ejemplo:**__
 
 ```xml
-let product1 = EAOProduct(ref: "ID_PRODUIT_1")
-let product2 = EAOProduct(ref: "ID_PRODUIT_2")
- 
-let cartPage = EACart(path: "NOM_PAGE")
-cartPage.setEulerian(uid: "UID")
-cartPage.setEulerian(cumul: true_OU_false)
-cartPage.addEulerian(product1, MONTANT_PRODUIT, QUANTITE_PRODUIT)
-cartPage.addEulerian(product2, MONTANT_PRODUIT, QUANTITE_PRODUIT)
+let product1 = EAOProduct(ref: String!)
+let product2 = EAOProduct(ref: String!)
+        
+//product parameter
+let param1 = EAOParams()
+param1.setEulerianWithStringValue(value: String!, forKey: String!)
+let param2 = EAOParams()
+param2.setEulerianWithStringValue(value: String!, forKey: String!)
+       
+//link parameters to products
+product1.setEulerianWith(value: EAOParams!)
+product2.setEulerianWith(value: EAOParams!)
+
+//tag
+let cartPage = EACart(path: String!#>)
+cartPage.setEulerianWithPageGroup(value: String!)
+
+//user information
+cartPage.setEulerianWithUid(value: String!)
+cartPage.setEulerianWithEmail(value: String!)
+cartPage.setEulerianWithProfile(value: String!)
+
+//set scartcumul
+cartPage.setEulerianWithCumul(value: Bool!)
+
+//custom parameter
+cartPage.setEulerianWithValue(value: Any!, forKey: String!)
+cartPage.setEulerianWithValue(value: Any!, forKey: String!)
+
+//add products tu cart
+cartPage.addEulerian(product: EAOProduct!, amount: Double!, quantity: Int32)
+cartPage.addEulerian(product: EAOProduct!, amount: Double!, quantity: Int32)
 EAnalytics.track(cartPage)
 ```
 
 __**Con valores:**__
 
 ```xml
-let product1 = EAOProduct(ref: "YJ74635")
-let product2 = EAOProduct(ref: "XV12345")
- 
-let cartPage = EACart(path: "Panier")
-cartPage.setEulerian(uid: "54378")
-cartPage.setEulerian(cumul: false)
-cartPage.addEulerian(product1, 60.00, 1)
-cartPage.addEulerian(product2, 20.00, 3)
+let product1 = EAOProduct(ref: "ref_product_1")
+let product2 = EAOProduct(ref: "ref_product_2")
+        
+//product parameter
+let param1 = EAOParams()
+param1.setEulerianWithStringValue("red", forKey: "color")
+let param2 = EAOParams()
+param2.setEulerianWithStringValue("large", forKey: "dimension")
+        
+//link parameters to products
+product1.setEulerianWith(product1)
+product2.setEulerianWith(product2)
+
+
+//tag
+let cartPage = EACart(path: "cart-page")
+cartPage.setEulerianWithPageGroup("my-pagegroup")
+
+//user information
+cartPage.setEulerianWithUid("123asd")
+cartPage.setEulerianWithEmail("test@test.fr")
+cartPage.setEulerianWithProfile("shopper")
+
+//set scartcumul
+cartPage.setEulerianWithCumul(false)
+
+//custom parameter
+cartPage.setEulerianWithValue("VALUE1", forKey: "MY_KEY1")
+cartPage.setEulerianWithValue("VALUE2", forKey: "MY_KEY2")
+
+//add products tu cart
+//repeat for every product
+cartPage.addEulerian(product1, amount: 5.5, quantity: 1)
+cartPage.addEulerian(product2, amount: 3.2, quantity: 3)
 EAnalytics.track(cartPage)
 ```
 
@@ -498,37 +601,109 @@ Cada objeto **EAOProduct** debe iniciarse y completarse con los parámetros eleg
 __**Ejemplo:**__
 
 ```xml
-let product1 = EAOProduct(ref: "ID_PRODUIT_1")
-let product2 = EAOProduct(ref: "ID_PRODUIT_2")
-let product3 = EAOProduct(ref: "ID_PRODUIT_3")
- 
-let orderPage = EAOrder(path: "NOM_PAGE", ref: "REFERENCE_VENTE")
-orderPage.setEulerian(uid: "UID")
-orderPage.setEulerian(amount: MONTANT_VENTE)
-orderPage.setEulerian(payment: "MOYEN_DE_PAIEMENT")
-orderPage.setEulerian(currency: "DEVISE_DU_MONTANT")
-orderPage.setEulerian(newCustomer: false_OU_true)
-orderPage.setEulerian(type: "TYPE_DE_VENTE")
-orderPage.addEulerian(product1, MONTANT_PRODUIT, QUANTITE_PRODUIT)
-orderPage.addEulerian(product2, MONTANT_PRODUIT, QUANTITE_PRODUIT)
-orderPage.addEulerian(product3, MONTANT_PRODUIT, QUANTITE_PRODUIT)
+let product1 = EAOProduct(ref: String!)
+let product2 = EAOProduct(ref: String!)
+        
+//product parameter
+let param1 = EAOParams()
+param1.setEulerianWithStringValue(value: String!, forKey: String!)
+let param2 = EAOParams()
+param2.setEulerianWithStringValue(value: String!, forKey: String!)
+       
+//link parameters to products
+product1.setEulerianWith(value: EAOParams!)
+product2.setEulerianWith(value: EAOParams!)
+
+//tag 
+let orderPage = EAOrder(path: String!, withRef: String!)
+orderPage.setEulerianWithPageGroup(value: String!)
+        
+//user information
+orderPage.setEulerianWithUid(value: String!)
+orderPage.setEulerianWithEmail(value: String!)
+orderPage.setEulerianWithProfile(value: String!)
+orderPage.setEulerianWithNewCustomer(value: Bool!)
+        
+//order page parameters
+orderPage.setEulerianWithAmount(value: Double!)
+orderPage.setEulerianWithType(value: String!)
+orderPage.setEulerianWithPayment(value: String!)
+orderPage.setEulerianWithCurrency(value: String!)
+
+//custom parameter
+orderPage.setEulerianWithValue(value: Any!, forKey: String!)
+orderPage.setEulerianWithValue(value: Any!, forKey: String!)
+        
+//repeat for every product
+orderPage.addEulerian(product: EAOProduct!, amount: Double!, quantity: Int32)
+orderPage.addEulerian(product: EAOProduct!, amount: Double!, quantity: Int32)
+
+//trigger
 EAnalytics.track(orderPage)
 ```
 
 __**Con valores:**__
 
 ```xml
-let product1 = EAOProduct(ref: "HA1432245")
-let product2 = EAOProduct(ref: "VE98373626")
- 
-let orderPage = EAOrder(path: "Tunnel|confirmation", ref: "F654335671")
-orderPage.setEulerian(uid: "57382")
-orderPage.setEulerian(amount: 460.00)
-orderPage.setEulerian(payment: "CB")
-orderPage.setEulerian(newCustomer: true)
-orderPage.setEulerian(currency: "USD")
-orderPage.setEulerian(type: "Vol+Hotel")
-orderPage.addEulerian(product1, 60.00, 1)
-orderPage.addEulerian(product2, 400.00, 1)
+let product1 = EAOProduct(ref: "ref_product_1")
+let product2 = EAOProduct(ref: "ref_product_2")
+        
+//product parameter
+let param1 = EAOParams()
+param1.setEulerianWithStringValue("red", forKey: "color")
+let param2 = EAOParams()
+param2.setEulerianWithStringValue("large", forKey: "dimension")
+        
+//link parameters to products
+product1.setEulerianWith(param1)
+product2.setEulerianWith(param2)
+         
+let orderPage = EAOrder(path: "sale-page", withRef: "random-ref")
+orderPage.setEulerianWithPageGroup("my-pagegroup")
+        
+//user information
+orderPage.setEulerianWithUid("123345")
+orderPage.setEulerianWithEmail("test@test.fr")
+orderPage.setEulerianWithProfile("buyer")
+orderPage.setEulerianWithNewCustomer(true)
+        
+//order page parameters
+orderPage.setEulerianWithAmount(10.50)
+orderPage.setEulerianWithType("ecommerce")
+orderPage.setEulerianWithPayment("CB")
+orderPage.setEulerianWithCurrency("EUR")
+        
+//CRM parameter
+orderPage.setEulerianWithValue("Andrea", forKey: "name")
+orderPage.setEulerianWithValue("Rome", forKey: "city")
+
+//custom parameter
+orderPage.setEulerianWithValue("italy", forKey: "delivery")
+orderPage.setEulerianWithValue("my-promocode", forKey: "promo-code")
+        
+//link product tu sale
+//repeat for every product
+orderPage.addEulerian(product1, amount: 2, quantity: 2)
+orderPage.addEulerian(product2, amount: 6.50, quantity: 1)
+        
+//trigger
 EAnalytics.track(orderPage)
+```
+
+# Context Flag (CFLAG)
+
+El objeto EAOSiteCentricCFlag es la clase dedicada a los Context Flag.
+
+Puedes crear una o más Context Flag a través del objeto EAOSiteCentricCFlag y con la función "**setEulerianWithValue("VALUE", forKey: "CLE")**" que toma el valor (uno o más) y la clave. El número máximo de valores posibles es 10.
+__**Exemple:**__
+
+```xml
+
+let cFlag = EAOSiteCentricCFlag()
+cFlag.setEulerianWithValues(["val1", "val2","val3"], forKey: "key1")
+cFlag.setEulerianWithValues(["valA"], forKey: "keyA")
+
+let genericTag = EAProperties(path: "NOM_PAGE")
+genericPage.setEulerianWith(cFlag)
+EAnalytics.track(genericTag)
 ```
