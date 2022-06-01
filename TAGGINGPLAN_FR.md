@@ -74,7 +74,9 @@ Le trafic généré par votre application peut remonter sur un site Eulerian dé
 Déscription des paramètres associés : 
   * **ea-appname** : NOM_APPLICATION , correspond au nom de l’application. Ce dernier ne doit pas changer
   * **ea-appversion** : VERSION_APPLICATION , correspond à la version de l’application
-  * **ea-appinstalled** : 1 , il doit être ajouté à tous les utilisateurs ayant déjà téléchargé l’application avant la mise à jour de l’url d’appel contenant les deux paramètres ci-dessus
+  * **ea-appinstalled** : 1 ,  Ce parametre signale qu'il ne faut pas compter de nouvelle installation pour cet appel.
+Il sert à gérer l'initialisation des users ayant déjà l'application avant l'intégration d'Eulerian.
+Ce parametre peut être fourni en permanence, en parallele de appversion et appname, dès lors que l'application considére qu'elle avait déjà été lancée précédemment sur ce device/user.
 
 La présence du paramètre **ea-appname** déclenche un traitement au niveau du système. 
 
