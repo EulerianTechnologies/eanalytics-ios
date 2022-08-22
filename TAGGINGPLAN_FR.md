@@ -26,7 +26,7 @@ http://www.vpg.fr/ios-landing-webview?ea-euidl-bypass=$euidl_de_l_app
 Si le ea.js détecte ce paramètre alors il l'utilise et le stocke en interne tout le long de la session, ceci afin d'éviter que le site ne le repasse a chaque page visitée. 
 Une fois ce passage de paramètre effectué, le tracking d'une application IOS en contexte webview ne diffère pas des formats Javascript que nous utilisons pour un site web classique.
 
-La documentation disponible à [cette adresse](https://eulerian.wiki/doku.php?id=fr:collect:technical_implementation:general) contient toutes les informations nécessaires à l'implémentation de nos Tags Javascript.
+La documentation disponible à [cette adresse](https://eulerian.wiki/doku.php?id=fr:modules:collect:onsite_collection:taggingplan_web&s[]=webview#tab__mobiles) contient toutes les informations nécessaires à l'implémentation de nos Tags Javascript.
 
 
 ## Tracking d'une application native
@@ -47,7 +47,7 @@ Notre **SDK** a été conçu pour faciliter au maximum l'intégration en offrant
 Les paramètres disponibles et les possibilités sont exactement les mêmes. Vous pourrez donc suivre les performances de votre application comme si il s'agissait d'un site web classique en intégrant les mêmes variables.
 
 Les appels générés par ces marqueurs sont également très proches de l'appel collector classique et ont été conçus pour être le plus léger possible afin de ne pas perturber l'application. 
-Certains paramètres de notre collector sont spécifiques au tracking d'une application mobile. Pour plus d'informations à ce sujet consultez [cette documentation](https://eulerian.wiki/doku.php?id=fr:modules:collect:onsite_collection:taggingplan_web&s[]=webview#tab__mobiles).
+Certains paramètres de notre collector sont spécifiques au tracking d'une application mobile. Pour plus d'informations à ce sujet consultez [cette documentation](https://eulerian.wiki/doku.php?id=fr:collect:technical_implementation:parameters_list).
 
 Note : Notre SDK est également capable de collecter un nombre illimité d'interactions offline et de les envoyer une fois l'utilisateur connecté. Ce procédé nous permet de continuer à tracker l'internaute même si ce dernier interagit avec votre application hors connection. La navigation est enregistrée et réattribuée à posteriori via notre paramètre ereplay-time.
 
