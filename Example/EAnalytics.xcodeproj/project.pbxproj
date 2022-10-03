@@ -83,6 +83,7 @@
 		AD5E3B96E164106A5C604A63 /* libPods-EAnalytics_ExampleTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAnalytics_ExampleTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F9B7293EAF1FA6E830A0D2 /* Pods-EAnalytics_ExampleTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_ExampleTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_ExampleTV/Pods-EAnalytics_ExampleTV.release.xcconfig"; sourceTree = "<group>"; };
 		F0763735D4092F48F0814A10 /* Pods-EAnalytics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAnalytics_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAnalytics_Example/Pods-EAnalytics_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F53DF26828EAE61600CAD3FB /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		F555C6BD1F73F915003DD70D /* EAnalytics Demo Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EAnalytics Demo Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F555C6BF1F73F915003DD70D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F555C6C11F73F915003DD70D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				F53DF26828EAE61600CAD3FB /* Package.swift */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for EAnalytics */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -389,7 +391,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EA;
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "François Rouault";
 				TargetAttributes = {
