@@ -7,7 +7,7 @@
 //
 
 #import "EAViewController.h"
-#import "EAnalytics/EAnalytics.h"
+#import <EAnalytics/EAnalytics.h>
 
 @interface EAViewController ()
 

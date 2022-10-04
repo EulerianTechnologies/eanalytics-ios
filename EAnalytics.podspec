@@ -27,11 +27,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  # s.resource_bundles = {
-  #  'EAnalytics' => ['Pod/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # Exclude this file that is required for SPM
+  s.exclude_files = 'Pod/Classes/include/**/*'
+
+  s.public_header_files = 'Pod/Classes/**/*.h'
 end
