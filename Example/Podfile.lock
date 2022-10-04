@@ -1,12 +1,8 @@
 PODS:
   - EAnalytics (1.3.6)
-  - Expecta (1.0.6)
-  - Specta (1.0.6)
 
 DEPENDENCIES:
   - EAnalytics (from `../`)
-  - Expecta
-  - Specta
 
 EXTERNAL SOURCES:
   EAnalytics:
@@ -14,9 +10,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EAnalytics: ca21413b47fb22e81d7ef01b41d2269fb5e0e89c
-  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 719aaa00639d2eab7ff87591c3e2624d41d51c7d
+PODFILE CHECKSUM: d1fe74e9fdc7e4b4bad7de251e9fee3cdab95530
 
 COCOAPODS: 1.2.1

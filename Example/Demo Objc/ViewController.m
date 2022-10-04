@@ -1,19 +1,19 @@
 //
-//  EAViewController.m
+//  ViewController.m
 //  EAnalytics
 //
 //  Created by François Rouault on 11/29/2015.
 //  Copyright (c) 2015 François Rouault. All rights reserved.
 //
 
-#import "EAViewController.h"
+#import "ViewController.h"
 #import <EAnalytics/EAnalytics.h>
 
-@interface EAViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation EAViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {

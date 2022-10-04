@@ -1,5 +1,5 @@
 //
-//  EAViewController.h
+//  ViewController.h
 //  EAnalytics
 //
 //  Created by François Rouault on 11/29/2015.
@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface EAViewController : UIViewController
+@interface ViewController : UIViewController
 
 @end
