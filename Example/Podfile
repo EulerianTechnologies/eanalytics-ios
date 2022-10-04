@@ -1,4 +1,4 @@
-#use_frameworks!
+use_frameworks!
 
 target 'Demo Objc' do
   pod 'EAnalytics', :path => '../'
@@ -8,6 +8,6 @@ target 'Demo Objc TV' do
     pod 'EAnalytics', :path => '../'
 end
 
-#target 'EAnalytics Demo Swift' do
-#    pod 'EAnalytics', :path => '../'
-#end
+target 'Demo Swift' do
+    pod 'EAnalytics', :path => '../'
+end
