@@ -1,13 +1,16 @@
 use_frameworks!
 
 target 'Demo Objc' do
+  platform :ios, '6.0'
   pod 'EAnalytics', :path => '../'
 end
 
 target 'Demo Objc TV' do
-    pod 'EAnalytics', :path => '../'
+  platform :tvos, '9.0'
+  pod 'EAnalytics', :path => '../'
 end
 
 target 'Demo Swift' do
-    pod 'EAnalytics', :path => '../'
+  platform :ios, '6.0'
+  pod 'EAnalytics', :path => '../'
 end
