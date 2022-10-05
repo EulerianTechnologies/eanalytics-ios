@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="wQg-tq-qST">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="EAViewController" sceneMemberID="viewController">
+                <viewController id="whP-gf-Uak" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3F-Ei-wCA">
-                                <rect key="frame" x="144.5" y="44" width="125" height="30"/>
+                                <rect key="frame" x="144.5" y="433" width="125" height="30"/>
                                 <state key="normal" title="Track a properties"/>
                                 <connections>
                                     <action selector="clickButton:" destination="whP-gf-Uak" eventType="touchUpInside" id="PZd-h7-uFi"/>
@@ -29,7 +29,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="B3F-Ei-wCA" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="3Rc-eq-3KK"/>
+                            <constraint firstItem="B3F-Ei-wCA" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="GBT-cI-bJa"/>
+                            <constraint firstItem="B3F-Ei-wCA" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="r5y-EL-yeu"/>
                             <constraint firstItem="B3F-Ei-wCA" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="ugw-rn-sMa"/>
                         </constraints>
                     </view>

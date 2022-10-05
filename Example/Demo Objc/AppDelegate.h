@@ -1,5 +1,5 @@
 //
-//  EAAppDelegate.h
+//  AppDelegate.h
 //  EAnalytics
 //
 //  Created by François Rouault on 11/29/2015.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface EAAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

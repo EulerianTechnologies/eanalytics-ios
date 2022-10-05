@@ -7,13 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <EAnalytics/EAProperties.h>
-#import <EAnalytics/EAOProduct.h>
-#import <EAnalytics/EAProducts.h>
-#import <EAnalytics/EACart.h>
-#import <EAnalytics/EAEstimate.h>
-#import <EAnalytics/EAOrder.h>
-#import <EAnalytics/EASearch.h>
+
+#import "AdIdentifier.h"
+#import "EAAssertion.h"
+#import "EACart.h"
+#import "EAEstimate.h"
+#import "EAOAction.h"
+#import "EAOParams.h"
+#import "EAOProduct.h"
+#import "EAOSiteCentricCFlag.h"
+#import "EAOSiteCentricProperties.h"
+#import "EAOrder.h"
+#import "EAProducts.h"
+#import "EAProperties.h"
+#import "EASearch.h"
 
 @interface EAnalytics : NSObject {
     

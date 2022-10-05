@@ -1,14 +1,14 @@
 //
-//  EAAppDelegate.m
+//  AppDelegate.m
 //  EAnalytics
 //
 //  Created by François Rouault on 11/29/2015.
 //  Copyright (c) 2015 François Rouault. All rights reserved.
 //
 
-#import "EAAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation EAAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

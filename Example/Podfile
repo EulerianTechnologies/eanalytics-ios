@@ -1,21 +1,16 @@
-#use_frameworks!
+use_frameworks!
 
-target 'EAnalytics_Example' do
+target 'Demo Objc' do
+  platform :ios, '6.0'
   pod 'EAnalytics', :path => '../'
-
-  target 'EAnalytics_Tests' do
-    inherit! :search_paths
-
-    pod 'Specta'
-  pod 'Expecta'
-  end
 end
 
-target 'EAnalytics_ExampleTV' do
-    pod 'EAnalytics', :path => '../'
-    
+target 'Demo Objc TV' do
+  platform :tvos, '9.0'
+  pod 'EAnalytics', :path => '../'
 end
 
-target 'EAnalytics Demo Swift' do
-    pod 'EAnalytics', :path => '../'
+target 'Demo Swift' do
+  platform :ios, '6.0'
+  pod 'EAnalytics', :path => '../'
 end
