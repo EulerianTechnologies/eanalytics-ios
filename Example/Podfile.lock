@@ -1,5 +1,5 @@
 PODS:
-  - EAnalytics (1.3.6)
+  - EAnalytics (1.4.0)
 
 DEPENDENCIES:
   - EAnalytics (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EAnalytics: ca21413b47fb22e81d7ef01b41d2269fb5e0e89c
+  EAnalytics: 3dabb9bfcb0abadc01c7be275a1b15f39a7f926b
 
 PODFILE CHECKSUM: 210760068d46549fb98bcb7897c543b2e813cc7a
 
