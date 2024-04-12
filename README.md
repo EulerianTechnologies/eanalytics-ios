@@ -9,6 +9,11 @@ it, simply add the following line to your Podfile:
 pod "EAnalytics"
 ```
 
+## Privacy permissions ##
+
+Make sure you provide your tracking domain in the **NSPrivacyTrackingDomains** entry of the Privacy manifest.
+
+
 ## Usage ##
 
 ### Example ###
