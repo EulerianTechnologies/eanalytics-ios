@@ -31,7 +31,7 @@ dispatch_queue_t serialQueue;
 
 + (NSString *)version
 {
-    return @"1.4.0";
+    return @"1.5.0";
 }
 
 + (NSString*)euidl {

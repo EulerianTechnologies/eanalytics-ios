@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0] (2024-04-12)
+
+- Add PrivacyInfo.xcprivacy file
+- Update podspec's iOS deployment target to 9.0 (was 6.0)
+
 ## [1.4.0] (2022-10-05)
 
 - Add support for Swift Package Manager (SPM)
