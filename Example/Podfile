@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'Demo Objc' do
-  platform :ios, '6.0'
+  platform :ios, '9.0'
   pod 'EAnalytics', :path => '../'
 end
 
@@ -11,6 +11,6 @@ target 'Demo Objc TV' do
 end
 
 target 'Demo Swift' do
-  platform :ios, '6.0'
+  platform :ios, '9.0'
   pod 'EAnalytics', :path => '../'
 end

@@ -21,12 +21,14 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/EulerianTechnologies/eanalytics-ios.git", :tag => "v#{s.version}" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
+
+  s.resource_bundles = { 'EAnalaytics' => ['Pod/Classes/*.xcprivacy'] }
 
   # Exclude this file that is required for SPM
   s.exclude_files = 'Pod/Classes/include/**/*'

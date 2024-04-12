@@ -22,6 +22,9 @@ let package = Package(
       .target(
         name: "EAnalytics",
         path: "Pod/Classes",
+        resources: [
+          .copy("PrivacyInfo.xcprivacy")
+        ],
         publicHeadersPath: "include"
       )
     ] 
