@@ -13,7 +13,6 @@ pod "EAnalytics"
 
 Make sure you provide your tracking domain in the **NSPrivacyTrackingDomains** entry of the Privacy manifest.
 
-
 ## Usage ##
 
 ### Example ###
