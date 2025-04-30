@@ -1,5 +1,25 @@
 # Plan de taggage iOS
 
+## Sommaire
+<!--ts-->
+- [Plan de taggage iOS](#plan-de-taggage-ios)
+  - [Tracking d'une application webview](#tracking-dune-application-webview)
+  - [Tracking d'une application native](#tracking-dune-application-native)
+    - [Règle d'affectation de trafic](#règle-daffectation-de-trafic)
+  - [Métriques téléchargement et mise à jour](#métriques-téléchargement-et-mise-à-jour)
+- [Liste des pages](#liste-des-pages)
+  - [Page générique](#page-générique)
+  - [Page produit](#page-produit)
+  - [Page catégorie](#page-catégorie)
+  - [Page moteur de recherche](#page-moteur-de-recherche)
+  - [Page d'erreur 404](#page-derreur-404)
+  - [Page devis](#page-de-devis)
+  - [Page panier](#page-panier)
+  - [Page commande](#page-de-commande)
+  - [Context Flag (CFLAG)](#context-flag-cflag)
+- [Le consentement dans une application iOS (GDPR / RGPD)](#le-consentement-dans-une-application-ios-gdpr--rgpd)
+<!--te-->
+
 ## Tracking d'une application webview
 
 En ce qui concerne la navigation dans le contexte d'une application de type //webview// sur IOS (site web html/js standard), notre identifiant interne doit être fourni dans l'url d'ouverture afin d'assurer la continuité du tracking. 
@@ -87,8 +107,6 @@ Le système va alimenter la métrique **téléchargement** si :
 
 Le système va alimenter la métrique **Mise à jour** si :
   * Le user a déjà été exposé au paramètre **ea-appname** et sa valeur est identique à celle présente lors de la dernière ouverture de l’application. Par contre, la valeur du paramètre **ea-appversion** est différente.
-
-![download_upgrade.png](https://bitbucket.org/repo/kA6LdM/images/3930826066-download_upgrade.png)
 
 # Liste des pages #
 
@@ -725,4 +743,99 @@ let genericTag = EAProperties(path: "NOM_PAGE")
 genericPage.setEulerianWith(cFlag)
 EAnalytics.track(genericTag)
 ```
+
+# Le consentement dans une application iOS (GDPR / RGPD)
+
+> **Important : il existe deux approches MUTUELLEMENT EXCLUSIVES.**  
+> Choisissez **l’une ou l’autre**, jamais les deux :
+>
+> 1. **Mode TCF v2 – TCString** : transmettre la chaîne de consentement via `gdpr_consent`.
+> 2. **Mode Catégories – `pmcat`** : transmettre les IDs des catégories refusées.
+
+---
+
+## 1. Mode **TCF v2** — paramètre `gdpr_consent`
+
+Transmettez la **TCString** générée par votre CMP au moment précis où l’utilisateur exprime son opt‑in ou opt‑out. Envoyez‑la **une seule fois par visiteur**.
+
+### Exemple Swift
+```xml
+// iOS – sans valeurs
+let genericTag = EAProperties(path: "NOM_PAGE")
+genericTag.setEulerian(uid: "UID")
+genericTag.setEulerian("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+genericTag.setEulerian("TCSTRING", forkey: "gdpr_consent")
+EAnalytics.track(genericTag)
+```
+```xml
+// iOS – avec valeurs
+let genericTag = EAProperties(path: "|univers|rubrique|page")
+genericTag.setEulerian(uid: "5434742")
+genericTag.setEulerian("mensuel", forKey: "abonnement")
+genericTag.setEulerian("EADURF214345", forkey: "gdpr_consent")
+EAnalytics.track(genericTag)
+```
+
+---
+
+## 2. Mode **Catégories** — paramètre `pmcat`
+
+Si vous ne souhaitez pas gérer la TCString, utilisez le paramètre `pmcat` pour lister les **IDs Eulerian** des catégories **refusées** par l’utilisateur, séparées par des tirets (`-`).
+
+*Envoyez `-` si l’utilisateur accepte toutes les catégories.*
+
+### Exemple de mappage
+
+| Catégorie | ID Eulerian |
+|-----------|-------------|
+| analytics | 1 |
+| publicité | 10 |
+| fonctionnel | 19 |
+
+Si l’utilisateur refuse « analytics » **et** « publicité », la valeur sera :`1-10`.
+
+### Exemples Swift
+```xml
+// iOS – sans valeurs
+let genericTag = EAProperties(path: "NOM_PAGE")
+genericTag.setEulerianWithUid(uid: "UID")
+genericTag.setEulerianWithValue("VALEUR_PARAM_PERSO", forKey: "NOM_PARAM_PERSO")
+genericTag.setEulerianWithValue("CATEGORIES_REFUSEES", forkey: "pmcat")
+EAnalytics.track(genericTag)
+```
+```xml
+// iOS – avec valeurs
+let genericTag = EAProperties(path: "|univers|rubrique|page")
+genericTag.setEulerianWithUid(uid: "5434742")
+genericTag.setEulerianWithValue("mensuel", forKey: "abonnement")
+genericTag.setEulerianWithValue("1-10", forkey: "pmcat")
+EAnalytics.track(genericTag)
+```
+
+---
+
+## Opt‑out général inconditionnel
+
+Pour offrir un retrait total, mettez à disposition l’URL :
+```
+<domaine_de_collecte>/optout.html?url=votre_domaine
+```
+Exemple :
+```
+https://mj23.eulerian.com/optout.html?url=www.eulerian.com
+```
+Ajoutez‑la à votre page « Vie privée / RGPD » ou dans la CMP.
+
+---
+
+### Récapitulatif
+
+| Étape | Mode TCF v2 | Mode Catégories |
+|-------|-------------|-----------------|
+| Paramètre clé | `gdpr_consent` | `pmcat` |
+| Quand l’envoyer ? | Lors de l’opt‑in/out | Lors de l’opt‑in/out |
+| Contenu | TCString | IDs refusés (ou `-`) |
+| Compatibilité | CMP TCF v2 | CMP maison / non‑TCF |
+
+**N’utilisez jamais ces deux modes simultanément dans une même application.**
 
