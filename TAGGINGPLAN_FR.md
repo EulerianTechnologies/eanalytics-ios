@@ -1,25 +1,5 @@
 # Plan de taggage iOS
 
-## Sommaire
-<!--ts-->
-- [Plan de taggage iOS](#plan-de-taggage-ios)
-  - [Tracking d'une application webview](#tracking-dune-application-webview)
-  - [Tracking d'une application native](#tracking-dune-application-native)
-    - [Règle d'affectation de trafic](#règle-daffectation-de-trafic)
-  - [Métriques téléchargement et mise à jour](#métriques-téléchargement-et-mise-à-jour)
-- [Liste des pages](#liste-des-pages)
-  - [Page générique](#page-générique)
-  - [Page produit](#page-produit)
-  - [Page catégorie](#page-catégorie)
-  - [Page moteur de recherche](#page-moteur-de-recherche)
-  - [Page d'erreur 404](#page-derreur-404)
-  - [Page devis](#page-de-devis)
-  - [Page panier](#page-panier)
-  - [Page commande](#page-de-commande)
-  - [Context Flag (CFLAG)](#context-flag-cflag)
-- [Le consentement dans une application iOS (GDPR / RGPD)](#le-consentement-dans-une-application-ios-gdpr--rgpd)
-<!--te-->
-
 ## Tracking d'une application webview
 
 En ce qui concerne la navigation dans le contexte d'une application de type //webview// sur IOS (site web html/js standard), notre identifiant interne doit être fourni dans l'url d'ouverture afin d'assurer la continuité du tracking. 
