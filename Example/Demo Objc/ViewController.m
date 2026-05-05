@@ -18,11 +18,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [EAnalytics initWithHost:@"ett.eulerian.net" andWithDebugLogs:YES];
-    
+
+    [EAnalytics initWithHost:@"dem.eulerian.net" andWithDebugLogs:YES];
+
     NSLog(@"euidl : %@", [EAnalytics euidl]);
     NSLog(@"EAnalytics version : %@", [EAnalytics version]);
+
+    [self installDemoButtons];
+}
+
+- (void)installDemoButtons
+{
+    UIStackView *stack = [[UIStackView alloc] init];
+    stack.axis = UILayoutConstraintAxisVertical;
+    stack.spacing = 12.0;
+    stack.alignment = UIStackViewAlignmentFill;
+    stack.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:stack];
+
+    [NSLayoutConstraint activateConstraints:@[
+        [stack.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:24],
+        [stack.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-24],
+        [stack.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:80]
+    ]];
+
+    NSArray<NSDictionary *> *buttons = @[
+        @{ @"title": @"PROPERTIES (with action)", @"sel": NSStringFromSelector(@selector(onClickProperties:)) },
+        @{ @"title": @"ACTION",                   @"sel": NSStringFromSelector(@selector(onClickAction:)) },
+        @{ @"title": @"TP VIEW",                  @"sel": NSStringFromSelector(@selector(onClickTpView:)) },
+        @{ @"title": @"TP CLICK",                 @"sel": NSStringFromSelector(@selector(onClickTpClick:)) }
+    ];
+    for (NSDictionary *def in buttons) {
+        UIButton *b = [UIButton buttonWithType:UIButtonTypeSystem];
+        [b setTitle:def[@"title"] forState:UIControlStateNormal];
+        [b addTarget:self action:NSSelectorFromString(def[@"sel"]) forControlEvents:UIControlEventTouchUpInside];
+        [stack addArrangedSubview:b];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +85,97 @@
     [action setEulerianWithInValue:@"my_in_value"];
     [action setEulerianWithRef:@"my_action_ref"];
     [action setEulerianWithOutValues:@[@"my_out_0", @"my_out_1", @"my_out_2" ]];
+    return action;
+}
+
+#pragma mark - Demo handlers (ported from Android)
+
+- (IBAction)onClickProperties:(id)sender
+{
+    EAProperties *prop = [[EAProperties alloc] initWithPath:@"the_path"];
+    [prop setEulerianWithEmail:@"test-email"];
+    [prop setEulerianWithPageGroup:@"test-group"];
+    [prop setEulerianWithProfile:@"test-profile"];
+    [prop setEulerianWithUid:@"test-uid"];
+    [prop setEulerianWithValue:@"..." forKey:@"whatever"];
+
+    [prop addEulerianWithAction:[self buildActionWithName:@"test-action-andrea-properties-1"
+                                                      ref:@"ref-XXX"
+                                                     mode:@"in"
+                                                    label:@"lb1,lb2,lb3"
+                                                   params:@{ @"provenance": @"martinique", @"couleur": @"jaune" }]];
+    [prop addEulerianWithAction:[self buildActionWithName:@"test-action-andrea-properties-2"
+                                                      ref:@"test-action-andrea-properties-2"
+                                                     mode:@"out"
+                                                    label:@"lb4,lb5,lb6"
+                                                   params:@{ @"couleur": @"jaune" }]];
+
+    [EAnalytics track:prop];
+}
+
+- (IBAction)onClickAction:(id)sender
+{
+    EAProperties *prop = [[EAProperties alloc] initWithPath:@"the_path"];
+    [prop setEulerianStandalone];
+    [prop setEulerianWithEmail:@"test-email"];
+    [prop setEulerianWithPageGroup:@"test-group"];
+    [prop setEulerianWithProfile:@"test-profile"];
+    [prop setEulerianWithUid:@"test-uid"];
+
+    [prop addEulerianWithAction:[self buildActionWithName:@"test-action-andrea-1"
+                                                      ref:@"ref-XXX"
+                                                     mode:@"in"
+                                                    label:@"lb1,lb2,lb3"
+                                                   params:@{ @"provenance": @"martinique", @"couleur": @"jaune" }]];
+    [prop addEulerianWithAction:[self buildActionWithName:@"test-action-andrea-2"
+                                                      ref:@"test-action-andrea-2"
+                                                     mode:@"out"
+                                                    label:@"lb4,lb5,lb6"
+                                                   params:@{ @"couleur": @"jaune" }]];
+
+    [EAnalytics track:prop];
+}
+
+- (IBAction)onClickTpView:(id)sender
+{
+    EATpView *view = [[EATpView alloc] initWithPath:@"homepage"];
+    [view setSiteName:@"admin-andrea2"];
+    [view setCampaign:@"summer_sale"];
+    [view setPlacement:@"banner_top"];
+    [view addProductWithRef:@"PROD_001" position:@(0)];
+    [view addProductWithRef:@"PROD_002" position:@(1)];
+    [view setUrl:@"http://eulerian.net"];
+    [EAnalytics track:view];
+}
+
+- (IBAction)onClickTpClick:(id)sender
+{
+    EATpClick *click = [[EATpClick alloc] initWithPath:@"homepage"];
+    [click setSiteName:@"admin-andrea2"];
+    [click setCampaign:@"summer_sale"];
+    [click setPlacement:@"banner_top"];
+    [click setProductWithRef:@"PROD_001" position:2];
+    [click setUrl:@"http://eulerian.net"];
+    [EAnalytics track:click];
+}
+
+- (EAOAction *)buildActionWithName:(NSString *)name
+                               ref:(NSString *)ref
+                              mode:(NSString *)mode
+                             label:(NSString *)label
+                            params:(NSDictionary<NSString *, NSString *> *)params
+{
+    EAOAction *action = [[EAOAction alloc] init];
+    [action setEulerianWithName:name];
+    [action setEulerianWithRef:ref];
+    [action setEulerianWithMode:mode];
+    [action setEulerianWithLabel:label];
+
+    EAOParams *p = [[EAOParams alloc] init];
+    [params enumerateKeysAndObjectsUsingBlock:^(NSString *k, NSString *v, BOOL *stop) {
+        [p setEulerianWithStringValue:v forKey:k];
+    }];
+    [action setEulerianWithParams:p];
     return action;
 }
 

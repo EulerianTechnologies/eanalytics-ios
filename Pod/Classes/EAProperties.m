@@ -36,6 +36,8 @@ static NSString* const KEY_PAGE_UID = @"uid";
 static NSString* const KEY_PAGE_PROFILE = @"profile";
 static NSString* const KEY_PAGE_GROUP = @"pagegroup";
 static NSString* const KEY_PAGE_ACTION = @"action";
+static NSString* const KEY_PAGE_ACTIONS = @"actions";
+static NSString* const KEY_PAGE_STANDALONE = @"ereplay-notag";
 static NSString* const KEY_PAGE_PROPERTY = @"property";
 static NSString* const KEY_PAGE_CFLAG = @"cflag";
 static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
@@ -141,6 +143,22 @@ static NSString* const KEY_PAGE_NEW_CUSTOMER = @"newcustomer";
 {
     [value checkConformity];
     [_dictionary setObject:value.dictionary forKey:KEY_PAGE_ACTION];
+}
+
+- (void)addEulerianWithAction:(EAOAction *)value
+{
+    [value checkConformity];
+    NSMutableArray *actions = [_dictionary objectForKey:KEY_PAGE_ACTIONS];
+    if (![actions isKindOfClass:[NSMutableArray class]]) {
+        actions = [NSMutableArray array];
+        [_dictionary setObject:actions forKey:KEY_PAGE_ACTIONS];
+    }
+    [actions addObject:value.dictionary];
+}
+
+- (void)setEulerianStandalone
+{
+    [_dictionary setObject:@(1) forKey:KEY_PAGE_STANDALONE];
 }
 
 - (void)setEulerianWithProperties:(EAOSiteCentricProperties*)value
