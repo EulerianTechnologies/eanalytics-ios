@@ -21,6 +21,8 @@
 #import "EAProducts.h"
 #import "EAProperties.h"
 #import "EASearch.h"
+#import "EATpClick.h"
+#import "EATpView.h"
 
 @interface EAnalytics : NSObject {
     
