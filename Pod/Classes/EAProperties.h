@@ -28,8 +28,10 @@
 - (void)setEulerianWithPageGroup:(NSString*)value;
 - (void)setEulerianWithNewCustomer:(BOOL)value;
 - (void)setEulerianWithAction:(EAOAction*)value;
+- (void)addEulerianWithAction:(EAOAction*)value;
 - (void)setEulerianWithProperties:(EAOSiteCentricProperties*)value;
 - (void)setEulerianWithCFlag:(EAOSiteCentricCFlag*)value;
+- (void)setEulerianStandalone;
 - (void)setEulerianWithValue:(id)value forKey:(NSString *)key;
 
 @end
