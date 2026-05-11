@@ -86,6 +86,48 @@ The SDK lets you access two of its property : the EUIDL and the current SDK vers
 
 If the SDK failed to send properties (no network), the SDK will try again in the next calls of 'track' or/and when the app gets launched.
 
+## Merchandise tracking (EATpView / EATpClick)
+
+A dedicated **merchandise** tracking flow has been added to send impressions and clicks on product showcases, recommendation lists and similar surfaces. See PR [#14](https://github.com/EulerianTechnologies/eanalytics-ios/pull/14).
+
+Two new trackable properties, modeled as subclasses of `EAProperties`:
+
+- **EATpView** — impression events, sent on `GET /tpview/`
+- **EATpClick** — click events, sent on `GET /tpclick/`
+
+Unlike the existing events (`EACart`, `EAOrder`, `EAEstimate`, `EASearch`, `EAProducts`), which are POSTed to the standard tracking endpoint, merchandise events are sent as **GET** requests on the two new dedicated paths. They share the same offline retry mechanism as the rest of the SDK: if the request fails, the payload is stored locally and replayed on the next tracking call or on the next app launch.
+
+### What's new
+
+- New `EATpView` and `EATpClick` classes (subclasses of `EAProperties`) sending merchandise events as GET requests on `/tpview/` and `/tpclick/`.
+- `EAOAction`: new `name` / `mode` / `label` / `params` API. The legacy `in` / `out` properties are **kept as deprecated** for backward compatibility.
+- `EAProperties`: new `addEulerianWithAction:` method (multiple actions on the same property) and `setEulerianStandalone`.
+- `EAnalytics`: per-type event routing and startup replay of pending events using a `type` discriminator persisted with each entry.
+- Objective-C demo app: dedicated buttons for the new flow.
+
+### Example
+
+```objective-c
+// Impression on a merchandise block — sent on GET /tpview/
+EATpView *view = [[EATpView alloc] initWithPath:@"homepage"];
+[view setSiteName:@"my-site"];
+[view setCampaign:@"summer_sale"];
+[view setPlacement:@"banner_top"];
+[view addProductWithRef:@"PROD_001" position:@(0)];
+[view addProductWithRef:@"PROD_002" position:@(1)];
+[view setUrl:@"http://eulerian.net"];
+[EAnalytics track:view];
+
+// Click on a product inside that block — sent on GET /tpclick/
+EATpClick *click = [[EATpClick alloc] initWithPath:@"homepage"];
+[click setSiteName:@"my-site"];
+[click setCampaign:@"summer_sale"];
+[click setPlacement:@"banner_top"];
+[click setProductWithRef:@"PROD_001" position:2];
+[click setUrl:@"http://eulerian.net"];
+[EAnalytics track:click];
+```
+
 ## Author ##
 
 Eulerian Technologies
